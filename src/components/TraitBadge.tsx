@@ -13,7 +13,7 @@ interface TraitBadgeProps {
 }
 
 export function TraitBadge({ children, className, onClick, showX, count }: TraitBadgeProps) {
-  const label = typeof children === 'string' ? children : String(children || '')
+  const label = children
   const isSpeciesTrait = isSpecies(label)
   const isOther = isOtherTrait(label)
   const isWildcard = label.toLowerCase() === 'wildcard'
@@ -23,6 +23,7 @@ export function TraitBadge({ children, className, onClick, showX, count }: Trait
     <button
       type="button"
       onClick={onClick}
+      onPointerDown={(e) => onClick && e.preventDefault()}
       className={clsx(
         'inline-flex items-center rounded-full border border-black/10 px-3 py-1 text-[14px] font-bebas uppercase tracking-wide shadow-sm transition-all',
         onClick ? 'cursor-pointer active:scale-95' : 'cursor-default',

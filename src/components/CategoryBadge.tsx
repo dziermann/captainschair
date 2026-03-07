@@ -12,13 +12,13 @@ interface CategoryBadgeProps {
 }
 
 export function CategoryBadge({ children, className, onClick, showX, count }: CategoryBadgeProps) {
-  const label = typeof children === 'string' ? children : String(children || '')
-  const styles = getCategoryStyle(label)
+  const styles = getCategoryStyle(children)
 
   return (
     <button
       type="button"
       onClick={onClick}
+      onPointerDown={(e) => onClick && e.preventDefault()}
       className={clsx(
         'relative inline-flex items-center rounded-r-full pl-3 pr-4 py-1.5 text-[14px] font-bebas uppercase tracking-wide text-white shadow-sm transition-all',
         styles.bg,
@@ -38,7 +38,7 @@ export function CategoryBadge({ children, className, onClick, showX, count }: Ca
           aria-hidden="true"
         />
       )}
-      {label}
+      {children}
       {count !== undefined && (
         <span className="ml-2 rounded-full bg-black/20 px-1.5 py-0.5 text-[10px] font-sans font-bold leading-none text-white/90">
           {count}

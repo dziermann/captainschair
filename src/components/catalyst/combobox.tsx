@@ -33,6 +33,14 @@ export function Combobox<T, TMultiple extends boolean = false>({
 }) {
   const [query, setQuery] = useState('')
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const lastTriggeredAt = useRef<number>(0)
+
+  const openMenu = () => {
+    const now = Date.now()
+    if (now - lastTriggeredAt.current < 500) return
+    lastTriggeredAt.current = now
+    buttonRef.current?.click()
+  }
 
   const filteredOptions =
     query === ''
@@ -51,92 +59,106 @@ export function Combobox<T, TMultiple extends boolean = false>({
       }}
       onClose={() => setQuery('')}
     >
-      <span
-        data-slot="control"
-        className={clsx([
-          className,
-          // Basic layout
-          'relative block w-full',
-          // Background color + shadow applied to inset pseudo element, so shadow blends with border in light mode
-          'before:absolute before:inset-px before:rounded-[calc(var(--radius-lg)-1px)] before:bg-white before:shadow-sm',
-          // Background color is moved to control and shadow is removed in dark mode so hide `before` pseudo
-          'dark:before:hidden',
-          // Focus ring
-          'after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:ring-transparent after:ring-inset sm:focus-within:after:ring-2 sm:focus-within:after:ring-blue-500',
-          // Disabled state
-          'has-data-disabled:opacity-50 has-data-disabled:before:bg-zinc-950/5 has-data-disabled:before:shadow-none',
-          // Invalid state
-          'has-data-invalid:before:shadow-red-500/10',
-        ])}
-      >
-        <Headless.ComboboxInput
-          autoFocus={autoFocus}
-          data-slot="control"
-          aria-label={ariaLabel}
-          displayValue={(option: T) => (multiple ? query : (displayValue(option) ?? ''))}
-          onChange={(event) => setQuery(event.target.value)}
-          onFocus={() => {
-            // Only click the button if the options aren't already visible
-            // This is a common way to trigger the open state in Headless UI Combobox
-            buttonRef.current?.click()
-          }}
-          placeholder={placeholder}
-          className={clsx([
-            className,
-            // Basic layout
-            'relative block w-full appearance-none rounded-lg py-[calc(--spacing(2.5)-1px)] sm:py-[calc(--spacing(1.5)-1px)]',
-            // Horizontal padding
-            'pr-[calc(--spacing(10)-1px)] pl-[calc(--spacing(3.5)-1px)] sm:pr-[calc(--spacing(9)-1px)] sm:pl-[calc(--spacing(3)-1px)]',
-            // Typography
-            'text-base/6 text-zinc-950 placeholder:text-zinc-500 sm:text-sm/6 dark:text-white',
-            // Border
-            'border border-zinc-950/10 data-hover:border-zinc-950/20 dark:border-white/10 dark:data-hover:border-white/20',
-            // Background color
-            'bg-transparent dark:bg-white/5',
-            // Hide default focus styles
-            'focus:outline-hidden',
-            // Invalid state
-            'data-invalid:border-red-500 data-invalid:data-hover:border-red-500 dark:data-invalid:border-red-500 dark:data-invalid:data-hover:border-red-500',
-            // Disabled state
-            'data-disabled:border-zinc-950/20 dark:data-disabled:border-white/15 dark:data-disabled:bg-white/2.5 dark:data-hover:data-disabled:border-white/15',
-            // System icons
-            'dark:scheme-dark',
-          ])}
-        />
-        <Headless.ComboboxButton ref={buttonRef} className="group absolute inset-y-0 right-0 flex items-center px-2">
-          <svg
-            className="size-5 stroke-zinc-500 group-data-disabled:stroke-zinc-600 group-data-hover:stroke-zinc-700 sm:size-4 dark:stroke-zinc-400 dark:group-data-hover:stroke-zinc-300 forced-colors:stroke-[CanvasText]"
-            viewBox="0 0 16 16"
-            aria-hidden="true"
-            fill="none"
+      {({ open }) => (
+        <>
+          <span
+            data-slot="control"
+            className={clsx([
+              className,
+              // Basic layout
+              'relative block w-full',
+              // Background color + shadow applied to inset pseudo element, so shadow blends with border in light mode
+              'before:absolute before:inset-px before:rounded-[calc(var(--radius-lg)-1px)] before:bg-white before:shadow-sm',
+              // Background color is moved to control and shadow is removed in dark mode so hide `before` pseudo
+              'dark:before:hidden',
+              // Focus ring
+              'after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:ring-transparent after:ring-inset sm:focus-within:after:ring-2 sm:focus-within:after:ring-blue-500',
+              // Disabled state
+              'has-data-disabled:opacity-50 has-data-disabled:before:bg-zinc-950/5 has-data-disabled:before:shadow-none',
+              // Invalid state
+              'has-data-invalid:before:shadow-red-500/10',
+            ])}
           >
-            <path d="M5.75 10.75L8 13L10.25 10.75" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M10.25 5.25L8 3L5.75 5.25" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Headless.ComboboxButton>
-      </span>
-      <Headless.ComboboxOptions
-        transition
-        anchor={anchor}
-        className={clsx(
-          // Anchor positioning
-          '[--anchor-gap:--spacing(2)] [--anchor-padding:--spacing(4)] sm:data-[anchor~=start]:[--anchor-offset:-4px]',
-          // Base styles,
-          'isolate z-50 min-w-[calc(var(--input-width)+8px)] scroll-py-1 rounded-xl p-1 select-none empty:invisible flex flex-col gap-1',
-          // Invisible border that is only visible in `forced-colors` mode for accessibility purposes
-          'outline outline-transparent focus:outline-hidden',
-          // Handle scrolling when menu won't fit in viewport
-          'overflow-y-scroll overscroll-contain',
-          // Popover background
-          'bg-white/75 backdrop-blur-xl dark:bg-zinc-800/75',
-          // Shadows
-          'shadow-lg ring-1 ring-zinc-950/10 dark:ring-white/10 dark:ring-inset',
-          // Transitions
-          'transition-opacity duration-100 ease-in data-closed:data-leave:opacity-0 data-transition:pointer-events-none'
-        )}
-      >
-        {filteredOptions.map((option) => children(option as NonNullable<T>))}
-      </Headless.ComboboxOptions>
+            <Headless.ComboboxInput
+              autoFocus={autoFocus}
+              data-slot="control"
+              aria-label={ariaLabel}
+              displayValue={(option: T) => (multiple ? query : (displayValue(option) ?? ''))}
+              onChange={(event) => setQuery(event.target.value)}
+              onPointerDown={(e) => {
+                // We stop propagation to avoid triggering both input and button/span events if they overlap.
+                e.stopPropagation()
+                if (!open) {
+                  openMenu()
+                }
+              }}
+              onFocus={(e) => {
+                if (!open && document.activeElement === e.target) {
+                  openMenu()
+                }
+              }}
+              placeholder={placeholder}
+              className={clsx([
+                className,
+                // Basic layout
+                'relative block w-full appearance-none rounded-lg py-[calc(--spacing(2.5)-1px)] sm:py-[calc(--spacing(1.5)-1px)]',
+                // Horizontal padding
+                'pr-[calc(--spacing(10)-1px)] pl-[calc(--spacing(3.5)-1px)] sm:pr-[calc(--spacing(9)-1px)] sm:pl-[calc(--spacing(3)-1px)]',
+                // Typography
+                'text-base/6 text-zinc-950 placeholder:text-zinc-500 sm:text-sm/6 dark:text-white',
+                // Border
+                'border border-zinc-950/10 data-hover:border-zinc-950/20 dark:border-white/10 dark:data-hover:border-white/20',
+                // Background color
+                'bg-transparent dark:bg-white/5',
+                // Hide default focus styles
+                'focus:outline-hidden',
+                // Invalid state
+                'data-invalid:border-red-500 data-invalid:data-hover:border-red-500 dark:data-invalid:border-red-500 dark:data-invalid:data-hover:border-red-500',
+                // Disabled state
+                'data-disabled:border-zinc-950/20 dark:data-disabled:border-white/15 dark:data-disabled:bg-white/2.5 dark:data-hover:data-disabled:border-white/15',
+                // System icons
+                'dark:scheme-dark',
+              ])}
+            />
+            <Headless.ComboboxButton
+              ref={buttonRef}
+              className="group absolute inset-y-0 right-0 flex items-center px-2 z-10 lg:pointer-events-auto pointer-events-none"
+            >
+              <svg
+                className="size-5 pointer-events-none stroke-zinc-500 group-data-disabled:stroke-zinc-600 group-data-hover:stroke-zinc-700 sm:size-4 dark:stroke-zinc-400 dark:group-data-hover:stroke-zinc-300 forced-colors:stroke-[CanvasText]"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+                fill="none"
+              >
+                <path d="M5.75 10.75L8 13L10.25 10.75" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M10.25 5.25L8 3L5.75 5.25" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Headless.ComboboxButton>
+          </span>
+          <Headless.ComboboxOptions
+            transition
+            anchor={anchor}
+            className={clsx(
+              // Anchor positioning
+              '[--anchor-gap:--spacing(2)] [--anchor-padding:--spacing(4)] sm:data-[anchor~=start]:[--anchor-offset:-4px]',
+              // Base styles,
+              'isolate z-50 min-w-[calc(var(--input-width)+8px)] scroll-py-1 rounded-xl p-1 select-none empty:invisible flex flex-col gap-1',
+              // Invisible border that is only visible in `forced-colors` mode for accessibility purposes
+              'outline outline-transparent focus:outline-hidden',
+              // Handle scrolling when menu won't fit in viewport
+              'overflow-y-scroll overscroll-contain',
+              // Popover background
+              'bg-white/75 backdrop-blur-xl dark:bg-zinc-800/75',
+              // Shadows
+              'shadow-lg ring-1 ring-zinc-950/10 dark:ring-white/10 dark:ring-inset',
+              // Transitions
+              'transition-opacity duration-100 ease-in data-closed:data-leave:opacity-0 data-transition:pointer-events-none'
+            )}
+          >
+            {filteredOptions.map((option) => children(option as NonNullable<T>))}
+          </Headless.ComboboxOptions>
+        </>
+      )}
     </Headless.Combobox>
   )
 }
