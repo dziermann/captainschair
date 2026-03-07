@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import CardFilter from '../../components/CardFilterReact';
+
+export async function getStaticPaths() {
+    const cardsData = await getCollection('cards');
+    if (!cardsData || cardsData.length === 0) {
+        console.error('No cards collection data found.');
+        return [{ params: { lang: 'en' }, props: { cards: [] } }];
+    }
+    
+    // Combine cards from all entries and attach the set name to each card
+    const allCards = cardsData.flatMap(entry => {
+        const setName = entry.data.set;
+        return (entry.data.cards || []).map(card => ({
+            ...card,
+            set: setName
+        }));
+    });
+    
+    if (allCards.length === 0) {
+        console.error('No cards found in entries.');
+        return [{ params: { lang: 'en' }, props: { cards: [] } }];
+    }
+
+    // Extract all available languages from all cards
+    const langs = new Set<string>();
+    allCards.forEach(card => {
+        if (card.translations) {
+            Object.keys(card.translations).forEach(lang => langs.add(lang));
+        }
+    });
+
+    if (langs.size === 0) langs.add('en');
+
+    // Filter out any potential language that could conflict with static filenames like sw.js or the base path
+    const finalLangs = Array.from(langs).filter(l => l !== 'sw.js' && l !== 'captainschair');
+
+    return finalLangs.map(lang => ({
+        params: { lang },
+        props: { cards: allCards }
+    }));
+  }
+
+const { lang } = Astro.params;
+const { cards } = Astro.props;
+
+if (!cards || cards.length === 0) {
+    console.error(`No cards available for language: ${lang}`);
+}
+---
+
+<Layout title={`Card Filter - ${lang}`}>
+    {cards && cards.length > 0 ? (
+        <CardFilter cards={cards} lang={lang} client:load />
+    ) : (
+        <div class="flex items-center justify-center min-h-[50vh]">
+            <div class="text-center">
+                <h1 class="text-2xl font-bold text-white mb-2">No cards found</h1>
+                <p class="text-zinc-400">Please check the content collection or language settings.</p>
+            </div>
+        </div>
+    )}
+</Layout>

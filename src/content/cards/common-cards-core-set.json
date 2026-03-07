@@ -1,0 +1,1789 @@
+{
+  "source": "Converted manually from uploaded PDF page images.",
+  "set": "Core Set",
+  "count": 101,
+  "cards": [
+    {
+      "id": "person-admiral-jarok",
+      "name": "Admiral Jarok",
+      "category": "person",
+      "traits": [
+        "Romulan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Admiral Jarok",
+          "traits": [
+            "Romulan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-admiral-nechayev",
+      "name": "Admiral Nechayev",
+      "category": "person",
+      "traits": [
+        "Human",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Admiral Nechayev",
+          "traits": [
+            "Human",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-admiral-pressman",
+      "name": "Admiral Pressman",
+      "category": "person",
+      "traits": [
+        "Mutiny",
+        "Shady",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Admiral Pressman",
+          "traits": [
+            "Mutiny",
+            "Shady",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-ambassador-kamarag",
+      "name": "Ambassador Kamarag",
+      "category": "person",
+      "traits": [
+        "Ambassador",
+        "Imperial",
+        "Klingon"
+      ],
+      "translations": {
+        "en": {
+          "name": "Ambassador Kamarag",
+          "traits": [
+            "Ambassador",
+            "Imperial",
+            "Klingon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-b-4",
+      "name": "B-4",
+      "category": "person",
+      "traits": [
+        "Android",
+        "Attack",
+        "Synthetic"
+      ],
+      "translations": {
+        "en": {
+          "name": "B-4",
+          "traits": [
+            "Android",
+            "Attack",
+            "Synthetic"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-bruce-maddox",
+      "name": "Bruce Maddox",
+      "category": "person",
+      "traits": [
+        "Engineer",
+        "Human",
+        "Scientist",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Bruce Maddox",
+          "traits": [
+            "Engineer",
+            "Human",
+            "Scientist",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-captain-dorg",
+      "name": "Captain Dorg",
+      "category": "person",
+      "traits": [
+        "Attack",
+        "Klingon",
+        "Shady"
+      ],
+      "translations": {
+        "en": {
+          "name": "Captain Dorg",
+          "traits": [
+            "Attack",
+            "Klingon",
+            "Shady"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-harry-mudd",
+      "name": "Harry Mudd",
+      "category": "person",
+      "traits": [
+        "Attack",
+        "Human",
+        "Shady",
+        "Time Travel"
+      ],
+      "translations": {
+        "en": {
+          "name": "Harry Mudd",
+          "traits": [
+            "Attack",
+            "Human",
+            "Shady",
+            "Time Travel"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-joret-dal",
+      "name": "Joret Dal",
+      "category": "person",
+      "traits": [
+        "Cardassian",
+        "Spy",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Joret Dal",
+          "traits": [
+            "Cardassian",
+            "Spy",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-laas",
+      "name": "Laas",
+      "category": "person",
+      "traits": [
+        "Changeling"
+      ],
+      "translations": {
+        "en": {
+          "name": "Laas",
+          "traits": [
+            "Changeling"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-laris",
+      "name": "Laris",
+      "category": "person",
+      "traits": [
+        "Romulan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Laris",
+          "traits": [
+            "Romulan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-lenara-kahn",
+      "name": "Lenara Kahn",
+      "category": "person",
+      "traits": [
+        "Scientist",
+        "Trill"
+      ],
+      "translations": {
+        "en": {
+          "name": "Lenara Kahn",
+          "traits": [
+            "Scientist",
+            "Trill"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-lursa",
+      "name": "Lursa",
+      "category": "person",
+      "traits": [
+        "Klingon",
+        "Shady"
+      ],
+      "translations": {
+        "en": {
+          "name": "Lursa",
+          "traits": [
+            "Klingon",
+            "Shady"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-lwaxana-troi",
+      "name": "Lwaxana Troi",
+      "category": "person",
+      "traits": [
+        "Ambassador",
+        "Betazoid",
+        "Telepath"
+      ],
+      "translations": {
+        "en": {
+          "name": "Lwaxana Troi",
+          "traits": [
+            "Ambassador",
+            "Betazoid",
+            "Telepath"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-mirok",
+      "name": "Mirok",
+      "category": "person",
+      "traits": [
+        "Attack",
+        "Romulan",
+        "Scientist"
+      ],
+      "translations": {
+        "en": {
+          "name": "Mirok",
+          "traits": [
+            "Attack",
+            "Romulan",
+            "Scientist"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-moriarty",
+      "name": "Moriarty",
+      "category": "person",
+      "traits": [
+        "Attack",
+        "Hologram",
+        "Shady",
+        "Synthetic"
+      ],
+      "translations": {
+        "en": {
+          "name": "Moriarty",
+          "traits": [
+            "Attack",
+            "Hologram",
+            "Shady",
+            "Synthetic"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-peanut-hamper",
+      "name": "Peanut Hamper",
+      "category": "person",
+      "traits": [
+        "Synthetic"
+      ],
+      "translations": {
+        "en": {
+          "name": "Peanut Hamper",
+          "traits": [
+            "Synthetic"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-phlox",
+      "name": "Phlox",
+      "category": "person",
+      "traits": [
+        "Doctor"
+      ],
+      "translations": {
+        "en": {
+          "name": "Phlox",
+          "traits": [
+            "Doctor"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-riva",
+      "name": "Riva",
+      "category": "person",
+      "traits": [
+        "Ambassador",
+        "Communication",
+        "Telepath"
+      ],
+      "translations": {
+        "en": {
+          "name": "Riva",
+          "traits": [
+            "Ambassador",
+            "Communication",
+            "Telepath"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-rom",
+      "name": "Rom",
+      "category": "person",
+      "traits": [
+        "Engineer",
+        "Ferengi"
+      ],
+      "translations": {
+        "en": {
+          "name": "Rom",
+          "traits": [
+            "Engineer",
+            "Ferengi"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-sakonna",
+      "name": "Sakonna",
+      "category": "person",
+      "traits": [
+        "Maquis",
+        "Vulcan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Sakonna",
+          "traits": [
+            "Maquis",
+            "Vulcan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-sukal",
+      "name": "Su'Kal",
+      "category": "person",
+      "traits": [
+        "Kelpien"
+      ],
+      "translations": {
+        "en": {
+          "name": "Su'Kal",
+          "traits": [
+            "Kelpien"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-talok",
+      "name": "Talok",
+      "category": "person",
+      "traits": [
+        "Attack",
+        "Romulan",
+        "Spy",
+        "Vulcan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Talok",
+          "traits": [
+            "Attack",
+            "Romulan",
+            "Spy",
+            "Vulcan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-tevrin-krit",
+      "name": "Tevrin Krit",
+      "category": "person",
+      "traits": [
+        "Business",
+        "Tellarite"
+      ],
+      "translations": {
+        "en": {
+          "name": "Tevrin Krit",
+          "traits": [
+            "Business",
+            "Tellarite"
+          ]
+        }
+      }
+    },
+    {
+      "id": "person-zephram-cochrane",
+      "name": "Zephram Cochrane",
+      "category": "person",
+      "traits": [
+        "Engineer",
+        "Human",
+        "Pilot"
+      ],
+      "translations": {
+        "en": {
+          "name": "Zephram Cochrane",
+          "traits": [
+            "Engineer",
+            "Human",
+            "Pilot"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-biobed",
+      "name": "Biobed",
+      "category": "cargo",
+      "traits": [
+        "Doctor"
+      ],
+      "translations": {
+        "en": {
+          "name": "Biobed",
+          "traits": [
+            "Doctor"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-borg-spatial-trajector",
+      "name": "Borg Spatial Trajector",
+      "category": "cargo",
+      "traits": [
+        "Borg",
+        "Scientist"
+      ],
+      "translations": {
+        "en": {
+          "name": "Borg Spatial Trajector",
+          "traits": [
+            "Borg",
+            "Scientist"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-cloaking-device",
+      "name": "Cloaking Device",
+      "category": "cargo",
+      "traits": [
+        "Cloak",
+        "Ongoing"
+      ],
+      "translations": {
+        "en": {
+          "name": "Cloaking Device",
+          "traits": [
+            "Cloak",
+            "Ongoing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-ferengi-wine",
+      "name": "Ferengi Wine",
+      "category": "cargo",
+      "traits": [
+        "Beverage",
+        "Ferengi"
+      ],
+      "translations": {
+        "en": {
+          "name": "Ferengi Wine",
+          "traits": [
+            "Beverage",
+            "Ferengi"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-forced-singularity",
+      "name": "Forced Singularity",
+      "category": "cargo",
+      "traits": [
+        "Anomaly",
+        "Ongoing",
+        "Romulan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Forced Singularity",
+          "traits": [
+            "Anomaly",
+            "Ongoing",
+            "Romulan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-holosuite",
+      "name": "Holosuite",
+      "category": "cargo",
+      "traits": [
+        "Business",
+        "Hologram"
+      ],
+      "translations": {
+        "en": {
+          "name": "Holosuite",
+          "traits": [
+            "Business",
+            "Hologram"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-horta",
+      "name": "Horta",
+      "category": "cargo",
+      "traits": [
+        "Alien",
+        "Creature",
+        "Ongoing"
+      ],
+      "translations": {
+        "en": {
+          "name": "Horta",
+          "traits": [
+            "Alien",
+            "Creature",
+            "Ongoing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-lirpa",
+      "name": "Lirpa",
+      "category": "cargo",
+      "traits": [
+        "Attack",
+        "Vulcan",
+        "Weapon"
+      ],
+      "translations": {
+        "en": {
+          "name": "Lirpa",
+          "traits": [
+            "Attack",
+            "Vulcan",
+            "Weapon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-mekleth",
+      "name": "Mek'leth",
+      "category": "cargo",
+      "traits": [
+        "Attack",
+        "Klingon",
+        "Weapon"
+      ],
+      "translations": {
+        "en": {
+          "name": "Mek'leth",
+          "traits": [
+            "Attack",
+            "Klingon",
+            "Weapon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-orb-of-time",
+      "name": "Orb of Time",
+      "category": "cargo",
+      "traits": [
+        "Bajoran",
+        "Time Travel"
+      ],
+      "translations": {
+        "en": {
+          "name": "Orb of Time",
+          "traits": [
+            "Bajoran",
+            "Time Travel"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-phasers",
+      "name": "Phasers",
+      "category": "cargo",
+      "traits": [
+        "Ongoing",
+        "Security",
+        "Starfleet",
+        "Weapon"
+      ],
+      "translations": {
+        "en": {
+          "name": "Phasers",
+          "traits": [
+            "Ongoing",
+            "Security",
+            "Starfleet",
+            "Weapon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-plasma-manifold",
+      "name": "Plasma Manifold",
+      "category": "cargo",
+      "traits": [
+        "Engineer"
+      ],
+      "translations": {
+        "en": {
+          "name": "Plasma Manifold",
+          "traits": [
+            "Engineer"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-tachyon-detection-grid",
+      "name": "Tachyon Detection Grid",
+      "category": "cargo",
+      "traits": [
+        "Attack",
+        "Communication"
+      ],
+      "translations": {
+        "en": {
+          "name": "Tachyon Detection Grid",
+          "traits": [
+            "Attack",
+            "Communication"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-tribbles",
+      "name": "Tribbles",
+      "category": "cargo",
+      "traits": [
+        "Attack",
+        "Creature"
+      ],
+      "translations": {
+        "en": {
+          "name": "Tribbles",
+          "traits": [
+            "Attack",
+            "Creature"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-type-iii-disruptor-pistols",
+      "name": "Type III Disruptor Pistols",
+      "category": "cargo",
+      "traits": [
+        "Attack",
+        "Weapon"
+      ],
+      "translations": {
+        "en": {
+          "name": "Type III Disruptor Pistols",
+          "traits": [
+            "Attack",
+            "Weapon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cargo-unstable-wormhole",
+      "name": "Unstable Wormhole",
+      "category": "cargo",
+      "traits": [
+        "Anomaly"
+      ],
+      "translations": {
+        "en": {
+          "name": "Unstable Wormhole",
+          "traits": [
+            "Anomaly"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-bird-of-prey",
+      "name": "Bird-of-Prey",
+      "category": "ship",
+      "traits": [
+        "Attack",
+        "Cloak",
+        "Imperial",
+        "Romulan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Bird-of-Prey",
+          "traits": [
+            "Attack",
+            "Cloak",
+            "Imperial",
+            "Romulan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-borg-probe",
+      "name": "Borg Probe",
+      "category": "ship",
+      "traits": [
+        "Borg"
+      ],
+      "translations": {
+        "en": {
+          "name": "Borg Probe",
+          "traits": [
+            "Borg"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-dkyr-cruiser",
+      "name": "D'Kyr Cruiser",
+      "category": "ship",
+      "traits": [
+        "Scientist",
+        "Vulcan"
+      ],
+      "translations": {
+        "en": {
+          "name": "D'Kyr Cruiser",
+          "traits": [
+            "Scientist",
+            "Vulcan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-holographic-drone-ship",
+      "name": "Holographic Drone Ship",
+      "category": "ship",
+      "traits": [
+        "Alien",
+        "Hologram",
+        "Romulan",
+        "Weapon"
+      ],
+      "translations": {
+        "en": {
+          "name": "Holographic Drone Ship",
+          "traits": [
+            "Alien",
+            "Hologram",
+            "Romulan",
+            "Weapon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-ktinga-battlecruiser",
+      "name": "K'Tinga Battlecruiser",
+      "category": "ship",
+      "traits": [
+        "Imperial",
+        "Klingon"
+      ],
+      "translations": {
+        "en": {
+          "name": "K'Tinga Battlecruiser",
+          "traits": [
+            "Imperial",
+            "Klingon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-kazon-raider",
+      "name": "Kazon Raider",
+      "category": "ship",
+      "traits": [
+        "Attack",
+        "Shady"
+      ],
+      "translations": {
+        "en": {
+          "name": "Kazon Raider",
+          "traits": [
+            "Attack",
+            "Shady"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-pakled-freighter",
+      "name": "Pakled Freighter",
+      "category": "ship",
+      "traits": [
+        "Business",
+        "Pakled"
+      ],
+      "translations": {
+        "en": {
+          "name": "Pakled Freighter",
+          "traits": [
+            "Business",
+            "Pakled"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-sona-battlecruiser",
+      "name": "Son'a Battlecruiser",
+      "category": "ship",
+      "traits": [
+        "Attack",
+        "Dominion",
+        "Shady"
+      ],
+      "translations": {
+        "en": {
+          "name": "Son'a Battlecruiser",
+          "traits": [
+            "Attack",
+            "Dominion",
+            "Shady"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-uss-enterprise-c",
+      "name": "U.S.S. Enterprise-C",
+      "category": "ship",
+      "traits": [
+        "Ambassador",
+        "Starfleet",
+        "Time Travel"
+      ],
+      "translations": {
+        "en": {
+          "name": "U.S.S. Enterprise-C",
+          "traits": [
+            "Ambassador",
+            "Starfleet",
+            "Time Travel"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-uss-pasteur",
+      "name": "U.S.S. Pasteur",
+      "category": "ship",
+      "traits": [
+        "Communication",
+        "Doctor",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "U.S.S. Pasteur",
+          "traits": [
+            "Communication",
+            "Doctor",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-uss-reliant",
+      "name": "U.S.S. Reliant",
+      "category": "ship",
+      "traits": [
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "U.S.S. Reliant",
+          "traits": [
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-voth-research-vessel",
+      "name": "Voth Research Vessel",
+      "category": "ship",
+      "traits": [
+        "Alien",
+        "Anomaly"
+      ],
+      "translations": {
+        "en": {
+          "name": "Voth Research Vessel",
+          "traits": [
+            "Alien",
+            "Anomaly"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ship-xindi-reptilian-battleship",
+      "name": "Xindi-Reptilian Battleship",
+      "category": "ship",
+      "traits": [
+        "Xindi"
+      ],
+      "translations": {
+        "en": {
+          "name": "Xindi-Reptilian Battleship",
+          "traits": [
+            "Xindi"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-arinsen",
+      "name": "Arin'Sen",
+      "category": "ally",
+      "traits": [
+        "Klingon"
+      ],
+      "translations": {
+        "en": {
+          "name": "Arin'Sen",
+          "traits": [
+            "Klingon"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-bolian",
+      "name": "Bolian",
+      "category": "ally",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Bolian",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "ally-bynars",
+      "name": "Bynars",
+      "category": "ally",
+      "traits": [
+        "Alien",
+        "Engineer"
+      ],
+      "translations": {
+        "en": {
+          "name": "Bynars",
+          "traits": [
+            "Alien",
+            "Engineer"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-denobulans",
+      "name": "Denobulans",
+      "category": "ally",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Denobulans",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "ally-edoisians",
+      "name": "Edoisians",
+      "category": "ally",
+      "traits": [
+        "Alien"
+      ],
+      "translations": {
+        "en": {
+          "name": "Edoisians",
+          "traits": [
+            "Alien"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-emerald-chain",
+      "name": "Emerald Chain",
+      "category": "ally",
+      "traits": [
+        "Andorian",
+        "Attack",
+        "Orion",
+        "Shady"
+      ],
+      "translations": {
+        "en": {
+          "name": "Emerald Chain",
+          "traits": [
+            "Andorian",
+            "Attack",
+            "Orion",
+            "Shady"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-halkan-council",
+      "name": "Halkan Council",
+      "category": "ally",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Halkan Council",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "ally-karemma",
+      "name": "Karemma",
+      "category": "ally",
+      "traits": [
+        "Business",
+        "Dominion"
+      ],
+      "translations": {
+        "en": {
+          "name": "Karemma",
+          "traits": [
+            "Business",
+            "Dominion"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-kelpien",
+      "name": "Kelpien",
+      "category": "ally",
+      "traits": [
+        "Kelpien"
+      ],
+      "translations": {
+        "en": {
+          "name": "Kelpien",
+          "traits": [
+            "Kelpien"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-leteans",
+      "name": "Leteans",
+      "category": "ally",
+      "traits": [
+        "Attack",
+        "Shady",
+        "Telepath"
+      ],
+      "translations": {
+        "en": {
+          "name": "Leteans",
+          "traits": [
+            "Attack",
+            "Shady",
+            "Telepath"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-organians",
+      "name": "Organians",
+      "category": "ally",
+      "traits": [
+        "Anomaly",
+        "Transcendent"
+      ],
+      "translations": {
+        "en": {
+          "name": "Organians",
+          "traits": [
+            "Anomaly",
+            "Transcendent"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-suliban",
+      "name": "Suliban",
+      "category": "ally",
+      "traits": [
+        "Alien",
+        "Time Travel"
+      ],
+      "translations": {
+        "en": {
+          "name": "Suliban",
+          "traits": [
+            "Alien",
+            "Time Travel"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ally-tholians",
+      "name": "Tholians",
+      "category": "ally",
+      "traits": [
+        "Alien"
+      ],
+      "translations": {
+        "en": {
+          "name": "Tholians",
+          "traits": [
+            "Alien"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-armagosa-observatory",
+      "name": "Armagosa Observatory",
+      "category": "location",
+      "traits": [
+        "Scientist",
+        "Starbase"
+      ],
+      "translations": {
+        "en": {
+          "name": "Armagosa Observatory",
+          "traits": [
+            "Scientist",
+            "Starbase"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-ancient-relay-station",
+      "name": "Ancient Relay Station",
+      "category": "location",
+      "traits": [
+        "Alien",
+        "Communication"
+      ],
+      "translations": {
+        "en": {
+          "name": "Ancient Relay Station",
+          "traits": [
+            "Alien",
+            "Communication"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-archer-iv",
+      "name": "Archer IV",
+      "category": "location",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Archer IV",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "location-baku",
+      "name": "Ba'Ku",
+      "category": "location",
+      "traits": [
+        "Anomaly"
+      ],
+      "translations": {
+        "en": {
+          "name": "Ba'Ku",
+          "traits": [
+            "Anomaly"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-betazed",
+      "name": "Betazed",
+      "category": "location",
+      "traits": [
+        "Betazoid"
+      ],
+      "translations": {
+        "en": {
+          "name": "Betazed",
+          "traits": [
+            "Betazoid"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-corvan-ii",
+      "name": "Corvan II",
+      "category": "location",
+      "traits": [
+        "Business",
+        "Human",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Corvan II",
+          "traits": [
+            "Business",
+            "Human",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-deep-space-k-7",
+      "name": "Deep Space K-7",
+      "category": "location",
+      "traits": [
+        "Starbase"
+      ],
+      "translations": {
+        "en": {
+          "name": "Deep Space K-7",
+          "traits": [
+            "Starbase"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-delta-vega",
+      "name": "Delta Vega",
+      "category": "location",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Delta Vega",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "location-derna",
+      "name": "Derna",
+      "category": "location",
+      "traits": [
+        "Bajoran",
+        "Doctor",
+        "Romulan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Derna",
+          "traits": [
+            "Bajoran",
+            "Doctor",
+            "Romulan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-dozaria",
+      "name": "Dozaria",
+      "category": "location",
+      "traits": [
+        "Breed"
+      ],
+      "translations": {
+        "en": {
+          "name": "Dozaria",
+          "traits": [
+            "Breed"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-freecloud",
+      "name": "Freecloud",
+      "category": "location",
+      "traits": [
+        "Business",
+        "Shady"
+      ],
+      "translations": {
+        "en": {
+          "name": "Freecloud",
+          "traits": [
+            "Business",
+            "Shady"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-indri-viii",
+      "name": "Indri VIII",
+      "category": "location",
+      "traits": [
+        "Anomaly"
+      ],
+      "translations": {
+        "en": {
+          "name": "Indri VIII",
+          "traits": [
+            "Anomaly"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-kelvas-docks",
+      "name": "Kelvas Docks",
+      "category": "location",
+      "traits": [
+        "Cardassian",
+        "Dominion",
+        "Engineer",
+        "Starbase"
+      ],
+      "translations": {
+        "en": {
+          "name": "Kelvas Docks",
+          "traits": [
+            "Cardassian",
+            "Dominion",
+            "Engineer",
+            "Starbase"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-memory-alpha",
+      "name": "Memory Alpha",
+      "category": "location",
+      "traits": [
+        "Communication",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Memory Alpha",
+          "traits": [
+            "Communication",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-regula-i",
+      "name": "Regula I",
+      "category": "location",
+      "traits": [
+        "Scientist",
+        "Starbase",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Regula I",
+          "traits": [
+            "Scientist",
+            "Starbase",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-risa",
+      "name": "Risa",
+      "category": "location",
+      "traits": [
+        "Business"
+      ],
+      "translations": {
+        "en": {
+          "name": "Risa",
+          "traits": [
+            "Business"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-solum",
+      "name": "Solum",
+      "category": "location",
+      "traits": [
+        "Alien"
+      ],
+      "translations": {
+        "en": {
+          "name": "Solum",
+          "traits": [
+            "Alien"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-tulgana-iv",
+      "name": "Tulgana IV",
+      "category": "location",
+      "traits": [
+        "Ambassador",
+        "Business",
+        "Klingon",
+        "Starfleet"
+      ],
+      "translations": {
+        "en": {
+          "name": "Tulgana IV",
+          "traits": [
+            "Ambassador",
+            "Business",
+            "Klingon",
+            "Starfleet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-vertex-iii",
+      "name": "Vertex III",
+      "category": "location",
+      "traits": [
+        "Orion",
+        "Shady"
+      ],
+      "translations": {
+        "en": {
+          "name": "Vertex III",
+          "traits": [
+            "Orion",
+            "Shady"
+          ]
+        }
+      }
+    },
+    {
+      "id": "location-xahea",
+      "name": "Xahea",
+      "category": "location",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Xahea",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "encounter-ancient-gene-fragments",
+      "name": "Ancient Gene Fragments",
+      "category": "encounter",
+      "traits": [
+        "Anomaly",
+        "Augment"
+      ],
+      "translations": {
+        "en": {
+          "name": "Ancient Gene Fragments",
+          "traits": [
+            "Anomaly",
+            "Augment"
+          ]
+        }
+      }
+    },
+    {
+      "id": "encounter-boltzmann-brain",
+      "name": "Boltzmann Brain",
+      "category": "encounter",
+      "traits": [
+        "Doctor",
+        "Telepath"
+      ],
+      "translations": {
+        "en": {
+          "name": "Boltzmann Brain",
+          "traits": [
+            "Doctor",
+            "Telepath"
+          ]
+        }
+      }
+    },
+    {
+      "id": "encounter-guardian-of-forever",
+      "name": "Guardian of Forever",
+      "category": "encounter",
+      "traits": [
+        "Anomaly",
+        "Ongoing",
+        "Time Travel",
+        "Transcendent"
+      ],
+      "translations": {
+        "en": {
+          "name": "Guardian of Forever",
+          "traits": [
+            "Anomaly",
+            "Ongoing",
+            "Time Travel",
+            "Transcendent"
+          ]
+        }
+      }
+    },
+    {
+      "id": "encounter-iconian-gateway",
+      "name": "Iconian Gateway",
+      "category": "encounter",
+      "traits": [
+        "Alien",
+        "Imperial"
+      ],
+      "translations": {
+        "en": {
+          "name": "Iconian Gateway",
+          "traits": [
+            "Alien",
+            "Imperial"
+          ]
+        }
+      }
+    },
+    {
+      "id": "encounter-koala",
+      "name": "Koala",
+      "category": "encounter",
+      "traits": [
+        "Wildcard"
+      ],
+      "translations": {
+        "en": {
+          "name": "Koala",
+          "traits": [
+            "Wildcard"
+          ]
+        }
+      }
+    },
+    {
+      "id": "encounter-omega-particle",
+      "name": "Omega Particle",
+      "category": "encounter",
+      "traits": [
+        "Scientist"
+      ],
+      "translations": {
+        "en": {
+          "name": "Omega Particle",
+          "traits": [
+            "Scientist"
+          ]
+        }
+      }
+    },
+    {
+      "id": "encounter-sha-ka-ree",
+      "name": "Sha Ka Ree",
+      "category": "encounter",
+      "traits": [
+        "Attack",
+        "Ongoing",
+        "Transcendent",
+        "Vulcan"
+      ],
+      "translations": {
+        "en": {
+          "name": "Sha Ka Ree",
+          "traits": [
+            "Attack",
+            "Ongoing",
+            "Transcendent",
+            "Vulcan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "encounter-vger",
+      "name": "V'Ger",
+      "category": "encounter",
+      "traits": [
+        "Synthetic"
+      ],
+      "translations": {
+        "en": {
+          "name": "V'Ger",
+          "traits": [
+            "Synthetic"
+          ]
+        }
+      }
+    },
+    {
+      "id": "incident-energy-drain",
+      "name": "Energy Drain",
+      "category": "incident",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Energy Drain",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "incident-hostile-contact",
+      "name": "Hostile Contact",
+      "category": "incident",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Hostile Contact",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "incident-political-crisis",
+      "name": "Political Crisis",
+      "category": "incident",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Political Crisis",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "incident-red-alert",
+      "name": "Red Alert",
+      "category": "incident",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Red Alert",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "incident-subspace-phenomenon",
+      "name": "Subspace Phenomenon",
+      "category": "incident",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Subspace Phenomenon",
+          "traits": []
+        }
+      }
+    },
+    {
+      "id": "incident-trade-embargo",
+      "name": "Trade Embargo",
+      "category": "incident",
+      "traits": [],
+      "translations": {
+        "en": {
+          "name": "Trade Embargo",
+          "traits": []
+        }
+      }
+    }
+  ]
+}

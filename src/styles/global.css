@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+@import "tailwindcss";
+@source "../../**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}";
+@theme {
+    --font-sans: "Inter Variable", sans-serif;
+    --font-bebas: "Bebas Neue", sans-serif;
+}
+
+@layer base {
+  html, body {
+    @apply h-full overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
