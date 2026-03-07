@@ -4,13 +4,13 @@ import { getCategoryStyle } from './utils/category'
 
 interface CardCategoryBadgeProps {
   children: string
+  category?: string
   className?: string
   onClick?: () => void
 }
 
-export function CardCategoryBadge({ children, className, onClick }: CardCategoryBadgeProps) {
-  const label = typeof children === 'string' ? children : String(children || '')
-  const styles = getCategoryStyle(label)
+export function CardCategoryBadge({ children, category, className, onClick }: CardCategoryBadgeProps) {
+  const styles = getCategoryStyle(category || children)
 
   return (
     <button
@@ -34,7 +34,7 @@ export function CardCategoryBadge({ children, className, onClick }: CardCategory
           aria-hidden="true"
         />
       )}
-      {label}
+      {children}
     </button>
   )
 }

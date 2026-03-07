@@ -5,14 +5,15 @@ import { getCategoryStyle } from './utils/category'
 
 interface CategoryBadgeProps {
   children: string
+  category?: string
   className?: string
   onClick?: () => void
   showX?: boolean
   count?: number
 }
 
-export function CategoryBadge({ children, className, onClick, showX, count }: CategoryBadgeProps) {
-  const styles = getCategoryStyle(children)
+export function CategoryBadge({ children, category, className, onClick, showX, count }: CategoryBadgeProps) {
+  const styles = getCategoryStyle(category || children)
 
   return (
     <button

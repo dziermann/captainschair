@@ -6,17 +6,19 @@ import { isOtherTrait } from './utils/otherTraits'
 
 interface TraitBadgeProps {
   children: string
+  trait?: string
   className?: string
   onClick?: () => void
   showX?: boolean
   count?: number
 }
 
-export function TraitBadge({ children, className, onClick, showX, count }: TraitBadgeProps) {
+export function TraitBadge({ children, trait, className, onClick, showX, count }: TraitBadgeProps) {
   const label = children
-  const isSpeciesTrait = isSpecies(label)
-  const isOther = isOtherTrait(label)
-  const isWildcard = label.toLowerCase() === 'wildcard'
+  const traitKey = trait || label
+  const isSpeciesTrait = isSpecies(traitKey)
+  const isOther = isOtherTrait(traitKey)
+  const isWildcard = traitKey.toLowerCase() === 'wildcard'
   const Icon = isSpeciesTrait ? Shield : isOther ? Zap : isWildcard ? Zap : Tag
 
   return (

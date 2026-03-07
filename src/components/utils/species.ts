@@ -18,6 +18,7 @@ export const species = [
   "Trill",
   "Vulcan",
   "Xindi",
+  "Breen",
 ]
 
 export function isSpecies(name: string): boolean {

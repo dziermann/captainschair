@@ -13,7 +13,6 @@ const cardsCollection = defineCollection({
       traits: z.array(z.string()),
       translations: z.record(z.object({
         name: z.string(),
-        traits: z.array(z.string())
       }))
     }))
   })

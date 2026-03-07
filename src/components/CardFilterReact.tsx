@@ -1,15 +1,19 @@
-import React, { useState, useMemo } from 'react'
-import { Filter, X, LayoutGrid, List, Search, SlidersHorizontal } from 'lucide-react'
+import React, { useState, useMemo, useEffect } from 'react'
+import { Filter, X, LayoutGrid, List, Search, SlidersHorizontal, ChevronDownIcon, Languages, Github } from 'lucide-react'
 import { TraitBadge } from './TraitBadge'
 import { CategoryBadge } from './CategoryBadge'
 import { isSpecies } from './utils/species'
 import { isOtherTrait } from './utils/otherTraits'
+import { getCategoryLabel } from './utils/category'
+import { getTraitLabel } from './utils/i18n'
 import { Combobox, ComboboxOption } from './catalyst/combobox'
 import { CardItem, type Card } from './CardItem'
 import {Badge, BadgeButton} from './catalyst/badge'
 import { Input, InputGroup } from './catalyst/input'
 import { Dialog, DialogBody, DialogTitle, DialogActions } from './catalyst/dialog'
 import { Button } from './catalyst/button'
+import { Dropdown, DropdownButton, DropdownItem, DropdownMenu } from './catalyst/dropdown'
+import { useTranslations } from './utils/i18n'
 
 interface Props {
   cards: Card[]
@@ -17,12 +21,21 @@ interface Props {
 }
 
 export default function CardFilterReact({ cards, lang }: Props) {
+  const t = useTranslations(lang);
   const [selectedTraits, setSelectedTraits] = useState<string[]>([])
   const [selectedSpecies, setSelectedSpecies] = useState<string[]>([])
   const [selectedOtherTraits, setSelectedOtherTraits] = useState<string[]>([])
   const [selectedCategories, setSelectedCategories] = useState<string | null>(null)
   const [selectedSets, setSelectedSets] = useState<string[]>(['Core Set'])
-  const [columns, setColumns] = useState<1 | 3>(1)
+  const [columns, setColumns] = useState<1 | 3>(3)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 640) {
+      setColumns(3)
+    } else {
+      setColumns(1)
+    }
+  }, [])
   const [searchQuery, setSearchQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
@@ -35,8 +48,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
     const tCounts: Record<string, number> = {}
 
     cards.forEach(card => {
-      const trans = card.translations[lang] || card.translations['en'] || (card as any)
-      const traits = trans.traits || []
+      const traits = card.traits || []
       traits.forEach((t: string) => {
         if (isSpecies(t)) {
           speciesSet.add(t)
@@ -96,18 +108,20 @@ export default function CardFilterReact({ cards, lang }: Props) {
       
       if (!translation) return false
       
+      const traits = card.traits || []
+      
       const matchesSearch = searchQuery === '' || 
         (translation.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (translation.traits || []).some((t: string) => t.toLowerCase().includes(searchQuery.toLowerCase()))
+        traits.some((t: string) => t.toLowerCase().includes(searchQuery.toLowerCase()))
 
       const matchesSpecies = selectedSpecies.length === 0 || 
-        selectedSpecies.some(f => (translation.traits || []).includes(f))
+        selectedSpecies.some(f => traits.includes(f))
 
       const matchesOtherTraits = selectedOtherTraits.length === 0 || 
-        selectedOtherTraits.some(trait => (translation.traits || []).includes(trait))
+        selectedOtherTraits.some(trait => traits.includes(trait))
 
       const matchesTraits = selectedTraits.length === 0 || 
-        selectedTraits.some(trait => (translation.traits || []).includes(trait))
+        selectedTraits.some(trait => traits.includes(trait))
       
       const matchesCategory = !selectedCategories || 
         card.category === selectedCategories
@@ -163,7 +177,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
       <div>
         <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
           <Filter className="size-4 text-indigo-400" />
-          Set
+          {t.sets}
         </h3>
         <div className="flex flex-col gap-3">
           <Combobox
@@ -172,7 +186,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
             value={selectedSets}
             onChange={(val) => setSelectedSets(val as string[])}
             displayValue={(val) => (val as unknown as string) || ''}
-            placeholder="Select sets..."
+            placeholder={t.allSets}
           >
             {(set) => (
               <ComboboxOption key={set} value={set} className="p-0! grid-cols-1!">
@@ -199,7 +213,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
       <div>
         <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
           <Filter className="size-4 text-indigo-400" />
-          Category
+          {t.categories}
         </h3>
         <div className="flex flex-col gap-3">
           <Combobox
@@ -207,20 +221,29 @@ export default function CardFilterReact({ cards, lang }: Props) {
             value={selectedCategories}
             onChange={(val) => setSelectedCategories(val as string | null)}
             displayValue={(val) => (val as unknown as string) || ''}
-            placeholder="Select category..."
+            placeholder={t.allCategories}
           >
             {(category) => (
               <ComboboxOption key={category} value={category} className="p-0! grid-cols-1!">
-                <CategoryBadge className="w-full text-left shadow-none!" count={categoryCounts[category]}>
-                  {category}
+                <CategoryBadge 
+                  category={category}
+                  className="w-full text-left shadow-none!" 
+                  count={categoryCounts[category]}
+                >
+                  {getCategoryLabel(category, lang)}
                 </CategoryBadge>
               </ComboboxOption>
             )}
           </Combobox>
           <div className="flex flex-wrap gap-2">
             {selectedCategories && (
-              <CategoryBadge key={selectedCategories} onClick={() => toggleCategory(selectedCategories)} showX>
-                {selectedCategories}
+              <CategoryBadge 
+                key={selectedCategories} 
+                category={selectedCategories}
+                onClick={() => toggleCategory(selectedCategories)} 
+                showX
+              >
+                {getCategoryLabel(selectedCategories, lang)}
               </CategoryBadge>
             )}
           </div>
@@ -230,7 +253,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
       <div>
         <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
           <Filter className="size-4 text-indigo-400" />
-          Species
+          {t.species}
         </h3>
         <div className="flex flex-col gap-3">
           <Combobox
@@ -238,21 +261,21 @@ export default function CardFilterReact({ cards, lang }: Props) {
             multiple
             value={selectedSpecies}
             onChange={(val) => setSelectedSpecies(val as string[])}
-            displayValue={(val) => (val as unknown as string) || ''}
-            placeholder="Select species..."
+            displayValue={(val) => getTraitLabel(val as unknown as string, lang) || ''}
+            placeholder={t.allSpecies}
           >
             {(speciesName) => (
               <ComboboxOption key={speciesName} value={speciesName} className="p-0! grid-cols-1!">
-                <TraitBadge className="w-full text-left shadow-none!" count={speciesCounts[speciesName]}>
-                  {speciesName}
+                <TraitBadge trait={speciesName} className="w-full text-left shadow-none!" count={speciesCounts[speciesName]}>
+                  {getTraitLabel(speciesName, lang)}
                 </TraitBadge>
               </ComboboxOption>
             )}
           </Combobox>
           <div className="flex flex-wrap gap-2">
             {selectedSpecies.map(species => (
-              <TraitBadge key={species} onClick={() => toggleSpecies(species)} showX>
-                {species}
+              <TraitBadge key={species} trait={species} onClick={() => toggleSpecies(species)} showX>
+                {getTraitLabel(species, lang)}
               </TraitBadge>
             ))}
           </div>
@@ -262,7 +285,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
       <div>
         <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
           <Filter className="size-4 text-indigo-400" />
-          Regular Traits
+          {t.traits}
         </h3>
         <div className="flex flex-col gap-3">
           <Combobox
@@ -270,21 +293,21 @@ export default function CardFilterReact({ cards, lang }: Props) {
             multiple
             value={selectedTraits}
             onChange={(val) => setSelectedTraits(val as string[])}
-            displayValue={(val) => (val as unknown as string) || ''}
-            placeholder="Select regular traits..."
+            displayValue={(val) => getTraitLabel(val as unknown as string, lang) || ''}
+            placeholder={t.selectTraits}
           >
             {(trait) => (
               <ComboboxOption key={trait} value={trait} className="p-0! grid-cols-1!">
-                <TraitBadge className="w-full text-left shadow-none!" count={traitCounts[trait]}>
-                  {trait}
+                <TraitBadge trait={trait} className="w-full text-left shadow-none!" count={traitCounts[trait]}>
+                  {getTraitLabel(trait, lang)}
                 </TraitBadge>
               </ComboboxOption>
             )}
           </Combobox>
           <div className="flex flex-wrap gap-2">
             {selectedTraits.map(trait => (
-              <TraitBadge key={trait} onClick={() => toggleTrait(trait)} showX>
-                {trait}
+              <TraitBadge key={trait} trait={trait} onClick={() => toggleTrait(trait)} showX>
+                {getTraitLabel(trait, lang)}
               </TraitBadge>
             ))}
           </div>
@@ -294,7 +317,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
       <div>
         <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
           <Filter className="size-4 text-indigo-400" />
-          Other Traits
+          {t.otherTraits}
         </h3>
         <div className="flex flex-col gap-3">
           <Combobox
@@ -302,21 +325,21 @@ export default function CardFilterReact({ cards, lang }: Props) {
             multiple
             value={selectedOtherTraits}
             onChange={(val) => setSelectedOtherTraits(val as string[])}
-            displayValue={(val) => (val as unknown as string) || ''}
-            placeholder="Select other traits..."
+            displayValue={(val) => getTraitLabel(val as unknown as string, lang) || ''}
+            placeholder={t.allOtherTraits}
           >
             {(trait) => (
               <ComboboxOption key={trait} value={trait} className="p-0! grid-cols-1!">
-                <TraitBadge className="w-full text-left shadow-none!" count={otherCounts[trait]}>
-                  {trait}
+                <TraitBadge trait={trait} className="w-full text-left shadow-none!" count={otherCounts[trait]}>
+                  {getTraitLabel(trait, lang)}
                 </TraitBadge>
               </ComboboxOption>
             )}
           </Combobox>
           <div className="flex flex-wrap gap-2">
             {selectedOtherTraits.map(trait => (
-              <TraitBadge key={trait} onClick={() => toggleOtherTrait(trait)} showX>
-                {trait}
+              <TraitBadge key={trait} trait={trait} onClick={() => toggleOtherTrait(trait)} showX>
+                {getTraitLabel(trait, lang)}
               </TraitBadge>
             ))}
           </div>
@@ -329,10 +352,33 @@ export default function CardFilterReact({ cards, lang }: Props) {
     <div className="flex flex-col gap-6">
       <div className="sticky top-0 z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md pt-4 pb-4 sm:pb-6 -mt-4 mb-2 flex flex-col gap-4 sm:gap-6 border-b border-zinc-200 dark:border-zinc-800">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="flex items-baseline gap-3">
-            <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">Database Explorer</h2>
+          <div className="flex items-center gap-3">
+            <Dropdown>
+              <DropdownButton as={Button} outline className="px-2! py-1! text-xs! h-7! flex items-center gap-1">
+                <Languages className="size-3.5" />
+                {lang.toUpperCase()}
+                <ChevronDownIcon className="size-3" />
+              </DropdownButton>
+              <DropdownMenu className="z-99">
+                <DropdownItem href="/captainschair/en/">
+                  EN - English
+                </DropdownItem>
+                <DropdownItem href="/captainschair/de/">
+                  DE - Deutsch
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+            <Button
+              href="https://github.com/dziermann/captainschair/issues/new"
+              target="_blank"
+              outline
+              className="px-2! py-1! text-[10px]! h-7! flex items-center gap-1 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+            >
+              <Github className="size-3" />
+              <span className="hidden sm:inline">{t.reportIssue}</span>
+            </Button>
             <p className="text-zinc-500 text-[10px] sm:text-xs">
-              <span className="text-indigo-400 font-semibold">{filteredCards.length}</span> / {cards.length} cards
+              <span className="text-indigo-400 font-semibold">{filteredCards.length}</span> / {t.traitCounts(cards.length)}
             </p>
           </div>
 
@@ -342,7 +388,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
               className="lg:hidden flex items-center gap-2 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-900/80 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all"
             >
               <SlidersHorizontal className="size-3.5" />
-              Filter
+              {t.filter}
             </button>
 
             <div className="flex items-center bg-zinc-100 dark:bg-zinc-900/80 rounded-lg p-0.5 border border-zinc-200 dark:border-zinc-800">
@@ -368,7 +414,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
                 className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-900/80 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all border border-zinc-200 dark:border-zinc-800 cursor-pointer"
               >
                 <X className="size-3" />
-                <span className="hidden sm:inline">Clear</span>
+                <span className="hidden sm:inline">{t.clearFilters}</span>
               </button>
             )}
 
@@ -377,10 +423,10 @@ export default function CardFilterReact({ cards, lang }: Props) {
                 <Search data-slot="icon" />
                 <Input 
                   type="search" 
-                  placeholder="Search..." 
+                  placeholder={t.search} 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  aria-label="Search cards"
+                  aria-label={t.search}
                   className="bg-zinc-100/50! dark:bg-zinc-900/50! backdrop-blur-sm"
                 />
               </InputGroup>
@@ -394,7 +440,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
       </div>
 
       <Dialog open={isFilterDrawerOpen} onClose={setIsFilterDrawerOpen} size="xl">
-        <DialogTitle>Filters</DialogTitle>
+        <DialogTitle>{t.filter}</DialogTitle>
         <DialogBody className="pb-8">
           <FilterControls mobile />
         </DialogBody>
@@ -406,7 +452,12 @@ export default function CardFilterReact({ cards, lang }: Props) {
       </Dialog>
 
       <div className={`grid ${columns === 1 ? 'grid-cols-1 gap-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
-        {filteredCards.map((card) => (
+        {filteredCards.length === 0 ? (
+           <div className="col-span-full flex flex-col items-center justify-center py-20 text-center">
+             <h3 className="text-xl font-bold text-zinc-900 dark:text-white">{t.noCardsFound}</h3>
+             <p className="text-zinc-500 mt-2">{t.noCardsDescription}</p>
+           </div>
+        ) : filteredCards.map((card) => (
           <CardItem
             key={card.id}
             card={card}

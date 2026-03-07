@@ -12,10 +12,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Admiral Jarok",
-          "traits": [
-            "Romulan"
-          ]
+          "name": "Admiral Jarok"
+        },
+        "de": {
+          "name": "Admiral Jarok"
         }
       }
     },
@@ -29,11 +29,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Admiral Nechayev",
-          "traits": [
-            "Human",
-            "Starfleet"
-          ]
+          "name": "Admiral Nechayev"
+        },
+        "de": {
+          "name": "Admiral Necheyev"
         }
       }
     },
@@ -48,12 +47,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Admiral Pressman",
-          "traits": [
-            "Mutiny",
-            "Shady",
-            "Starfleet"
-          ]
+          "name": "Admiral Pressman"
+        },
+        "de": {
+          "name": "Admiral Pressman"
         }
       }
     },
@@ -68,12 +65,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Ambassador Kamarag",
-          "traits": [
-            "Ambassador",
-            "Imperial",
-            "Klingon"
-          ]
+          "name": "Ambassador Kamarag"
+        },
+        "de": {
+          "name": "Botschafter Kamarag"
         }
       }
     },
@@ -88,12 +83,10 @@
       ],
       "translations": {
         "en": {
-          "name": "B-4",
-          "traits": [
-            "Android",
-            "Attack",
-            "Synthetic"
-          ]
+          "name": "B-4"
+        },
+        "de": {
+          "name": "B-4"
         }
       }
     },
@@ -109,13 +102,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Bruce Maddox",
-          "traits": [
-            "Engineer",
-            "Human",
-            "Scientist",
-            "Starfleet"
-          ]
+          "name": "Bruce Maddox"
+        },
+        "de": {
+          "name": "Bruce Maddox"
         }
       }
     },
@@ -130,12 +120,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Captain Dorg",
-          "traits": [
-            "Attack",
-            "Klingon",
-            "Shady"
-          ]
+          "name": "Captain Dorg"
+        },
+        "de": {
+          "name": "Captain Dorg"
         }
       }
     },
@@ -151,13 +139,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Harry Mudd",
-          "traits": [
-            "Attack",
-            "Human",
-            "Shady",
-            "Time Travel"
-          ]
+          "name": "Harry Mudd"
+        },
+        "de": {
+          "name": "Harry Mudd"
         }
       }
     },
@@ -172,12 +157,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Joret Dal",
-          "traits": [
-            "Cardassian",
-            "Spy",
-            "Starfleet"
-          ]
+          "name": "Joret Dal"
+        },
+        "de": {
+          "name": "Joret Dal"
         }
       }
     },
@@ -190,10 +173,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Laas",
-          "traits": [
-            "Changeling"
-          ]
+          "name": "Laas"
+        },
+        "de": {
+          "name": "Laas"
         }
       }
     },
@@ -206,10 +189,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Laris",
-          "traits": [
-            "Romulan"
-          ]
+          "name": "Laris"
+        },
+        "de": {
+          "name": "Laris"
         }
       }
     },
@@ -223,11 +206,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Lenara Kahn",
-          "traits": [
-            "Scientist",
-            "Trill"
-          ]
+          "name": "Lenara Kahn"
+        },
+        "de": {
+          "name": "Lenara Kahn"
         }
       }
     },
@@ -241,11 +223,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Lursa",
-          "traits": [
-            "Klingon",
-            "Shady"
-          ]
+          "name": "Lursa"
+        },
+        "de": {
+          "name": "Lursa"
         }
       }
     },
@@ -260,12 +241,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Lwaxana Troi",
-          "traits": [
-            "Ambassador",
-            "Betazoid",
-            "Telepath"
-          ]
+          "name": "Lwaxana Troi"
+        },
+        "de": {
+          "name": "Lwaxana Troi"
         }
       }
     },
@@ -280,12 +259,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Mirok",
-          "traits": [
-            "Attack",
-            "Romulan",
-            "Scientist"
-          ]
+          "name": "Mirok"
+        },
+        "de": {
+          "name": "Mirok"
         }
       }
     },
@@ -301,13 +278,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Moriarty",
-          "traits": [
-            "Attack",
-            "Hologram",
-            "Shady",
-            "Synthetic"
-          ]
+          "name": "Moriarty"
+        },
+        "de": {
+          "name": "Moriarty"
         }
       }
     },
@@ -320,10 +294,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Peanut Hamper",
-          "traits": [
-            "Synthetic"
-          ]
+          "name": "Peanut Hamper"
+        },
+        "de": {
+          "name": "Erdnuss-Snackbox"
         }
       }
     },
@@ -336,10 +310,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Phlox",
-          "traits": [
-            "Doctor"
-          ]
+          "name": "Phlox"
+        },
+        "de": {
+          "name": "Phlox"
         }
       }
     },
@@ -354,12 +328,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Riva",
-          "traits": [
-            "Ambassador",
-            "Communication",
-            "Telepath"
-          ]
+          "name": "Riva"
+        },
+        "de": {
+          "name": "Riva"
         }
       }
     },
@@ -373,11 +345,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Rom",
-          "traits": [
-            "Engineer",
-            "Ferengi"
-          ]
+          "name": "Rom"
+        },
+        "de": {
+          "name": "Rom"
         }
       }
     },
@@ -391,11 +362,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Sakonna",
-          "traits": [
-            "Maquis",
-            "Vulcan"
-          ]
+          "name": "Sakonna"
+        },
+        "de": {
+          "name": "Sakonna"
         }
       }
     },
@@ -408,10 +378,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Su'Kal",
-          "traits": [
-            "Kelpien"
-          ]
+          "name": "Su'Kal"
+        },
+        "de": {
+          "name": "Su'Kal"
         }
       }
     },
@@ -427,13 +397,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Talok",
-          "traits": [
-            "Attack",
-            "Romulan",
-            "Spy",
-            "Vulcan"
-          ]
+          "name": "Talok"
+        },
+        "de": {
+          "name": "Talok"
         }
       }
     },
@@ -447,11 +414,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Tevrin Krit",
-          "traits": [
-            "Business",
-            "Tellarite"
-          ]
+          "name": "Tevrin Krit"
+        },
+        "de": {
+          "name": "Tevrin Krit"
         }
       }
     },
@@ -466,12 +432,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Zephram Cochrane",
-          "traits": [
-            "Engineer",
-            "Human",
-            "Pilot"
-          ]
+          "name": "Zephram Cochrane"
+        },
+        "de": {
+          "name": "Zefram Cochrane"
         }
       }
     },
@@ -484,10 +448,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Biobed",
-          "traits": [
-            "Doctor"
-          ]
+          "name": "Biobed"
+        },
+        "de": {
+          "name": "Biobett"
         }
       }
     },
@@ -501,11 +465,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Borg Spatial Trajector",
-          "traits": [
-            "Borg",
-            "Scientist"
-          ]
+          "name": "Borg Spatial Trajector"
+        },
+        "de": {
+          "name": "Borg Raumtrajektor"
         }
       }
     },
@@ -519,11 +482,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Cloaking Device",
-          "traits": [
-            "Cloak",
-            "Ongoing"
-          ]
+          "name": "Cloaking Device"
+        },
+        "de": {
+          "name": "Tarnvorrichtung"
         }
       }
     },
@@ -537,11 +499,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Ferengi Wine",
-          "traits": [
-            "Beverage",
-            "Ferengi"
-          ]
+          "name": "Ferengi Wine"
+        },
+        "de": {
+          "name": "Ferengi Wein"
         }
       }
     },
@@ -556,12 +517,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Forced Singularity",
-          "traits": [
-            "Anomaly",
-            "Ongoing",
-            "Romulan"
-          ]
+          "name": "Forced Singularity"
+        },
+        "de": {
+          "name": "Künstliche Singularität"
         }
       }
     },
@@ -575,11 +534,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Holosuite",
-          "traits": [
-            "Business",
-            "Hologram"
-          ]
+          "name": "Holosuite"
+        },
+        "de": {
+          "name": "Holosuite"
         }
       }
     },
@@ -594,12 +552,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Horta",
-          "traits": [
-            "Alien",
-            "Creature",
-            "Ongoing"
-          ]
+          "name": "Horta"
+        },
+        "de": {
+          "name": "Horta"
         }
       }
     },
@@ -614,12 +570,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Lirpa",
-          "traits": [
-            "Attack",
-            "Vulcan",
-            "Weapon"
-          ]
+          "name": "Lirpa"
+        },
+        "de": {
+          "name": "Lirpa"
         }
       }
     },
@@ -634,12 +588,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Mek'leth",
-          "traits": [
-            "Attack",
-            "Klingon",
-            "Weapon"
-          ]
+          "name": "Mek'leth"
+        },
+        "de": {
+          "name": "Mek'leth"
         }
       }
     },
@@ -653,11 +605,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Orb of Time",
-          "traits": [
-            "Bajoran",
-            "Time Travel"
-          ]
+          "name": "Orb of Time"
+        },
+        "de": {
+          "name": "Drehkörper der Zeit"
         }
       }
     },
@@ -673,13 +624,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Phasers",
-          "traits": [
-            "Ongoing",
-            "Security",
-            "Starfleet",
-            "Weapon"
-          ]
+          "name": "Phasers"
+        },
+        "de": {
+          "name": "Phaser"
         }
       }
     },
@@ -692,10 +640,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Plasma Manifold",
-          "traits": [
-            "Engineer"
-          ]
+          "name": "Plasma Manifold"
+        },
+        "de": {
+          "name": "Plasmaverteiler"
         }
       }
     },
@@ -709,11 +657,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Tachyon Detection Grid",
-          "traits": [
-            "Attack",
-            "Communication"
-          ]
+          "name": "Tachyon Detection Grid"
+        },
+        "de": {
+          "name": "Tachyon-Ortungsgitter"
         }
       }
     },
@@ -727,11 +674,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Tribbles",
-          "traits": [
-            "Attack",
-            "Creature"
-          ]
+          "name": "Tribbles"
+        },
+        "de": {
+          "name": "Tribbles"
         }
       }
     },
@@ -745,11 +691,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Type III Disruptor Pistols",
-          "traits": [
-            "Attack",
-            "Weapon"
-          ]
+          "name": "Type III Disruptor Pistols"
+        },
+        "de": {
+          "name": "Typ III Disruptor-Pistolen"
         }
       }
     },
@@ -762,10 +707,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Unstable Wormhole",
-          "traits": [
-            "Anomaly"
-          ]
+          "name": "Unstable Wormhole"
+        },
+        "de": {
+          "name": "Instabiles Wurmloch"
         }
       }
     },
@@ -781,13 +726,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Bird-of-Prey",
-          "traits": [
-            "Attack",
-            "Cloak",
-            "Imperial",
-            "Romulan"
-          ]
+          "name": "Bird-of-Prey"
+        },
+        "de": {
+          "name": "Bird-of-Prey"
         }
       }
     },
@@ -800,10 +742,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Borg Probe",
-          "traits": [
-            "Borg"
-          ]
+          "name": "Borg Probe"
+        },
+        "de": {
+          "name": "Borg-Sonde"
         }
       }
     },
@@ -817,11 +759,10 @@
       ],
       "translations": {
         "en": {
-          "name": "D'Kyr Cruiser",
-          "traits": [
-            "Scientist",
-            "Vulcan"
-          ]
+          "name": "D'Kyr Cruiser"
+        },
+        "de": {
+          "name": "D'Kyr Kreuzer"
         }
       }
     },
@@ -837,13 +778,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Holographic Drone Ship",
-          "traits": [
-            "Alien",
-            "Hologram",
-            "Romulan",
-            "Weapon"
-          ]
+          "name": "Holographic Drone Ship"
+        },
+        "de": {
+          "name": "Holographisches Drohnenschiff"
         }
       }
     },
@@ -857,11 +795,10 @@
       ],
       "translations": {
         "en": {
-          "name": "K'Tinga Battlecruiser",
-          "traits": [
-            "Imperial",
-            "Klingon"
-          ]
+          "name": "K'Tinga Battlecruiser"
+        },
+        "de": {
+          "name": "K'Tinga Schlachtkreuzer"
         }
       }
     },
@@ -875,11 +812,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Kazon Raider",
-          "traits": [
-            "Attack",
-            "Shady"
-          ]
+          "name": "Kazon Raider"
+        },
+        "de": {
+          "name": "Kazon Raider"
         }
       }
     },
@@ -893,11 +829,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Pakled Freighter",
-          "traits": [
-            "Business",
-            "Pakled"
-          ]
+          "name": "Pakled Freighter"
+        },
+        "de": {
+          "name": "Pakled Frachter"
         }
       }
     },
@@ -912,12 +847,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Son'a Battlecruiser",
-          "traits": [
-            "Attack",
-            "Dominion",
-            "Shady"
-          ]
+          "name": "Son'a Battlecruiser"
+        },
+        "de": {
+          "name": "Son'a Schlachtkreuzer"
         }
       }
     },
@@ -932,12 +865,10 @@
       ],
       "translations": {
         "en": {
-          "name": "U.S.S. Enterprise-C",
-          "traits": [
-            "Ambassador",
-            "Starfleet",
-            "Time Travel"
-          ]
+          "name": "U.S.S. Enterprise-C"
+        },
+        "de": {
+          "name": "U.S.S. Enterprise-C"
         }
       }
     },
@@ -952,12 +883,10 @@
       ],
       "translations": {
         "en": {
-          "name": "U.S.S. Pasteur",
-          "traits": [
-            "Communication",
-            "Doctor",
-            "Starfleet"
-          ]
+          "name": "U.S.S. Pasteur"
+        },
+        "de": {
+          "name": "U.S.S. Pasteur"
         }
       }
     },
@@ -970,10 +899,10 @@
       ],
       "translations": {
         "en": {
-          "name": "U.S.S. Reliant",
-          "traits": [
-            "Starfleet"
-          ]
+          "name": "U.S.S. Reliant"
+        },
+        "de": {
+          "name": "U.S.S. Reliant"
         }
       }
     },
@@ -987,11 +916,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Voth Research Vessel",
-          "traits": [
-            "Alien",
-            "Anomaly"
-          ]
+          "name": "Voth Research Vessel"
+        },
+        "de": {
+          "name": "Voth Forschungs-Schiff"
         }
       }
     },
@@ -1004,10 +932,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Xindi-Reptilian Battleship",
-          "traits": [
-            "Xindi"
-          ]
+          "name": "Xindi-Reptilian Battleship"
+        },
+        "de": {
+          "name": "Xindi-Reptilianer Kriegsschiff"
         }
       }
     },
@@ -1020,10 +948,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Arin'Sen",
-          "traits": [
-            "Klingon"
-          ]
+          "name": "Arin'Sen"
+        },
+        "de": {
+          "name": "Arin'Sen"
         }
       }
     },
@@ -1034,8 +962,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Bolian",
-          "traits": []
+          "name": "Bolian"
+        },
+        "de": {
+          "name": "Bolianer"
         }
       }
     },
@@ -1049,11 +979,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Bynars",
-          "traits": [
-            "Alien",
-            "Engineer"
-          ]
+          "name": "Bynars"
+        },
+        "de": {
+          "name": "Binäre"
         }
       }
     },
@@ -1064,8 +993,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Denobulans",
-          "traits": []
+          "name": "Denobulans"
+        },
+        "de": {
+          "name": "Denobulaner"
         }
       }
     },
@@ -1078,10 +1009,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Edoisians",
-          "traits": [
-            "Alien"
-          ]
+          "name": "Edoisians"
+        },
+        "de": {
+          "name": "Edosianer"
         }
       }
     },
@@ -1097,13 +1028,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Emerald Chain",
-          "traits": [
-            "Andorian",
-            "Attack",
-            "Orion",
-            "Shady"
-          ]
+          "name": "Emerald Chain"
+        },
+        "de": {
+          "name": "Smaragdkette"
         }
       }
     },
@@ -1114,8 +1042,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Halkan Council",
-          "traits": []
+          "name": "Halkan Council"
+        },
+        "de": {
+          "name": "Der Hohe Rat von Halkan"
         }
       }
     },
@@ -1129,11 +1059,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Karemma",
-          "traits": [
-            "Business",
-            "Dominion"
-          ]
+          "name": "Karemma"
+        },
+        "de": {
+          "name": "Karemma"
         }
       }
     },
@@ -1146,10 +1075,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Kelpien",
-          "traits": [
-            "Kelpien"
-          ]
+          "name": "Kelpien"
+        },
+        "de": {
+          "name": "Kelpianer"
         }
       }
     },
@@ -1164,12 +1093,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Leteans",
-          "traits": [
-            "Attack",
-            "Shady",
-            "Telepath"
-          ]
+          "name": "Leteans"
+        },
+        "de": {
+          "name": "Letheaner"
         }
       }
     },
@@ -1183,11 +1110,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Organians",
-          "traits": [
-            "Anomaly",
-            "Transcendent"
-          ]
+          "name": "Organians"
+        },
+        "de": {
+          "name": "Organier"
         }
       }
     },
@@ -1201,11 +1127,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Suliban",
-          "traits": [
-            "Alien",
-            "Time Travel"
-          ]
+          "name": "Suliban"
+        },
+        "de": {
+          "name": "Suliban"
         }
       }
     },
@@ -1218,10 +1143,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Tholians",
-          "traits": [
-            "Alien"
-          ]
+          "name": "Tholians"
+        },
+        "de": {
+          "name": "Tholianer"
         }
       }
     },
@@ -1235,11 +1160,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Armagosa Observatory",
-          "traits": [
-            "Scientist",
-            "Starbase"
-          ]
+          "name": "Armagosa Observatory"
+        },
+        "de": {
+          "name": "Amargosa Observatorium"
         }
       }
     },
@@ -1253,11 +1177,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Ancient Relay Station",
-          "traits": [
-            "Alien",
-            "Communication"
-          ]
+          "name": "Ancient Relay Station"
+        },
+        "de": {
+          "name": "Antike Relaisstation"
         }
       }
     },
@@ -1268,8 +1191,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Archer IV",
-          "traits": []
+          "name": "Archer IV"
+        },
+        "de": {
+          "name": "Archer IV"
         }
       }
     },
@@ -1282,10 +1207,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Ba'Ku",
-          "traits": [
-            "Anomaly"
-          ]
+          "name": "Ba'Ku"
+        },
+        "de": {
+          "name": "Ba'Ku"
         }
       }
     },
@@ -1298,10 +1223,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Betazed",
-          "traits": [
-            "Betazoid"
-          ]
+          "name": "Betazed"
+        },
+        "de": {
+          "name": "Betazed"
         }
       }
     },
@@ -1316,12 +1241,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Corvan II",
-          "traits": [
-            "Business",
-            "Human",
-            "Starfleet"
-          ]
+          "name": "Corvan II"
+        },
+        "de": {
+          "name": "Corvan II"
         }
       }
     },
@@ -1334,10 +1257,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Deep Space K-7",
-          "traits": [
-            "Starbase"
-          ]
+          "name": "Deep Space K-7"
+        },
+        "de": {
+          "name": "Deep-Space-Station-K-7"
         }
       }
     },
@@ -1348,8 +1271,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Delta Vega",
-          "traits": []
+          "name": "Delta Vega"
+        },
+        "de": {
+          "name": "Delta Vega"
         }
       }
     },
@@ -1364,12 +1289,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Derna",
-          "traits": [
-            "Bajoran",
-            "Doctor",
-            "Romulan"
-          ]
+          "name": "Derna"
+        },
+        "de": {
+          "name": "Derna"
         }
       }
     },
@@ -1378,14 +1301,14 @@
       "name": "Dozaria",
       "category": "location",
       "traits": [
-        "Breed"
+        "Breen"
       ],
       "translations": {
         "en": {
-          "name": "Dozaria",
-          "traits": [
-            "Breed"
-          ]
+          "name": "Dozaria"
+        },
+        "de": {
+          "name": "Dozaria"
         }
       }
     },
@@ -1399,11 +1322,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Freecloud",
-          "traits": [
-            "Business",
-            "Shady"
-          ]
+          "name": "Freecloud"
+        },
+        "de": {
+          "name": "Freecloud"
         }
       }
     },
@@ -1416,10 +1338,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Indri VIII",
-          "traits": [
-            "Anomaly"
-          ]
+          "name": "Indri VIII"
+        },
+        "de": {
+          "name": "Indri VIII"
         }
       }
     },
@@ -1435,13 +1357,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Kelvas Docks",
-          "traits": [
-            "Cardassian",
-            "Dominion",
-            "Engineer",
-            "Starbase"
-          ]
+          "name": "Kelvas Docks"
+        },
+        "de": {
+          "name": "Kelvas-Reparaturstation"
         }
       }
     },
@@ -1455,11 +1374,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Memory Alpha",
-          "traits": [
-            "Communication",
-            "Starfleet"
-          ]
+          "name": "Memory Alpha"
+        },
+        "de": {
+          "name": "Memory Alpha"
         }
       }
     },
@@ -1474,12 +1392,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Regula I",
-          "traits": [
-            "Scientist",
-            "Starbase",
-            "Starfleet"
-          ]
+          "name": "Regula I"
+        },
+        "de": {
+          "name": "Regula I"
         }
       }
     },
@@ -1492,10 +1408,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Risa",
-          "traits": [
-            "Business"
-          ]
+          "name": "Risa"
+        },
+        "de": {
+          "name": "Risa"
         }
       }
     },
@@ -1508,10 +1424,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Solum",
-          "traits": [
-            "Alien"
-          ]
+          "name": "Solum"
+        },
+        "de": {
+          "name": "Solum"
         }
       }
     },
@@ -1527,13 +1443,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Tulgana IV",
-          "traits": [
-            "Ambassador",
-            "Business",
-            "Klingon",
-            "Starfleet"
-          ]
+          "name": "Tulgana IV"
+        },
+        "de": {
+          "name": "Tulgana IV"
         }
       }
     },
@@ -1547,11 +1460,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Vertex III",
-          "traits": [
-            "Orion",
-            "Shady"
-          ]
+          "name": "Vertex III"
+        },
+        "de": {
+          "name": "Verex III"
         }
       }
     },
@@ -1562,8 +1474,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Xahea",
-          "traits": []
+          "name": "Xahea"
+        },
+        "de": {
+          "name": "Xahea"
         }
       }
     },
@@ -1577,11 +1491,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Ancient Gene Fragments",
-          "traits": [
-            "Anomaly",
-            "Augment"
-          ]
+          "name": "Ancient Gene Fragments"
+        },
+        "de": {
+          "name": "Uralte Genfragmente"
         }
       }
     },
@@ -1595,11 +1508,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Boltzmann Brain",
-          "traits": [
-            "Doctor",
-            "Telepath"
-          ]
+          "name": "Boltzmann Brain"
+        },
+        "de": {
+          "name": "Boltzmann-Gehirn"
         }
       }
     },
@@ -1615,13 +1527,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Guardian of Forever",
-          "traits": [
-            "Anomaly",
-            "Ongoing",
-            "Time Travel",
-            "Transcendent"
-          ]
+          "name": "Guardian of Forever"
+        },
+        "de": {
+          "name": "Hüter der Ewigkeit"
         }
       }
     },
@@ -1635,11 +1544,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Iconian Gateway",
-          "traits": [
-            "Alien",
-            "Imperial"
-          ]
+          "name": "Iconian Gateway"
+        },
+        "de": {
+          "name": "Iconianisches Portal"
         }
       }
     },
@@ -1652,10 +1560,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Koala",
-          "traits": [
-            "Wildcard"
-          ]
+          "name": "Koala"
+        },
+        "de": {
+          "name": "Koala"
         }
       }
     },
@@ -1668,10 +1576,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Omega Particle",
-          "traits": [
-            "Scientist"
-          ]
+          "name": "Omega Particle"
+        },
+        "de": {
+          "name": "Omega-Partikel"
         }
       }
     },
@@ -1687,13 +1595,10 @@
       ],
       "translations": {
         "en": {
-          "name": "Sha Ka Ree",
-          "traits": [
-            "Attack",
-            "Ongoing",
-            "Transcendent",
-            "Vulcan"
-          ]
+          "name": "Sha Ka Ree"
+        },
+        "de": {
+          "name": "Sha Ka Ree"
         }
       }
     },
@@ -1706,10 +1611,10 @@
       ],
       "translations": {
         "en": {
-          "name": "V'Ger",
-          "traits": [
-            "Synthetic"
-          ]
+          "name": "V'Ger"
+        },
+        "de": {
+          "name": "V'Ger"
         }
       }
     },
@@ -1720,8 +1625,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Energy Drain",
-          "traits": []
+          "name": "Energy Drain"
+        },
+        "de": {
+          "name": "Energieverlust"
         }
       }
     },
@@ -1732,8 +1639,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Hostile Contact",
-          "traits": []
+          "name": "Hostile Contact"
+        },
+        "de": {
+          "name": "Feindlicher Kontakt"
         }
       }
     },
@@ -1744,8 +1653,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Political Crisis",
-          "traits": []
+          "name": "Political Crisis"
+        },
+        "de": {
+          "name": "Politische Krise"
         }
       }
     },
@@ -1756,8 +1667,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Red Alert",
-          "traits": []
+          "name": "Red Alert"
+        },
+        "de": {
+          "name": "Roter Alarm"
         }
       }
     },
@@ -1768,8 +1681,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Subspace Phenomenon",
-          "traits": []
+          "name": "Subspace Phenomenon"
+        },
+        "de": {
+          "name": "Subraum-Phänomen"
         }
       }
     },
@@ -1780,8 +1695,10 @@
       "traits": [],
       "translations": {
         "en": {
-          "name": "Trade Embargo",
-          "traits": []
+          "name": "Trade Embargo"
+        },
+        "de": {
+          "name": "Handelsembargo"
         }
       }
     }

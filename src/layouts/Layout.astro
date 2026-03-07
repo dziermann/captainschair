@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { Navigation } from '../components/Navigation';
 import { DarkModeToggle } from '../components/DarkModeToggle';
 
 interface Props {
@@ -17,14 +16,14 @@ const { lang = 'en' } = Astro.params;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Captain's Chair Card Filter" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" />
-		<link rel="icon" type="image/svg+xml" href="/captainschair/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/captainschair/icons/ship.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="theme-color" content="#F8991D" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta name="apple-mobile-web-app-title" content="Captain's Chair" />
 		<meta name="mobile-web-app-capable" content="yes" />
-		<link rel="apple-touch-icon" href="/captainschair/favicon.svg" />
+		<link rel="apple-touch-icon" href="/captainschair/icons/ship.svg" />
 		<link rel="manifest" href="/captainschair/manifest.webmanifest" />
 		<title>{title}</title>
 		<script is:inline>

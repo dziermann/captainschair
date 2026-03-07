@@ -1,3 +1,5 @@
+import { uiTranslations } from './i18n'
+
 export type Category = 'person' | 'cargo' | 'ship' | 'ally' | 'location' | 'encounter' | 'incident'
 
 export interface CategoryStyle {
@@ -60,33 +62,24 @@ export const categoryStyles: Record<string, CategoryStyle> = {
   },
 }
 
-const categoryMapping: Record<string, string> = {
-  // German -> English
-  'person': 'person',
-  'fracht': 'cargo',
-  'schiff': 'ship',
-  'verbündeter': 'ally',
-  'begegnung': 'encounter',
-  'zwischenfall': 'incident',
-  'ort': 'location',
-  // English -> English (for completeness)
-  'cargo': 'cargo',
-  'ally': 'ally',
-  'location': 'location',
-  'encounter': 'encounter',
-  'incident': 'incident',
-}
-
 export function getCategoryStyle(category: string): CategoryStyle {
   const normalized = category.toLowerCase()
-  const mappedKey = categoryMapping[normalized] || normalized
   
   return (
-    categoryStyles[mappedKey] || {
+    categoryStyles[normalized] || {
       bg: 'bg-zinc-600',
       hoverBg: 'hover:bg-zinc-700',
       darkBg: 'dark:bg-zinc-700',
       darkHoverBg: 'dark:hover:bg-zinc-600',
     }
   )
+}
+
+export function getCategoryLabel(category: string, lang: string): string {
+  const normalized = category.toLowerCase()
+  const language = (lang in uiTranslations ? lang : 'en') as keyof typeof uiTranslations
+  const translations = uiTranslations[language]
+  
+  // @ts-ignore
+  return translations.categoryLabels[normalized] || category
 }

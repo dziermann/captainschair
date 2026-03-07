@@ -29,7 +29,7 @@ export default defineConfig({
         theme_color: '#F8991D',
         icons: [
           {
-            src: 'favicon.svg',
+            src: 'icons/ship.svg',
             sizes: 'any',
             type: 'image/svg+xml',
             purpose: 'any'
