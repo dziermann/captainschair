@@ -30,7 +30,7 @@ export function CardCategoryBadge({ children, category, className, onClick }: Ca
         <img
           src={styles.icon}
           alt=""
-          className="mr-1.5 size-3.5 brightness-0 invert"
+          className="mr-1.5 size-3.5 brightness-0 invert w-auto"
           aria-hidden="true"
         />
       )}

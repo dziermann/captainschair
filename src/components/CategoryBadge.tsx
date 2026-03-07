@@ -32,12 +32,14 @@ export function CategoryBadge({ children, category, className, onClick, showX, c
     >
       <div className="absolute inset-y-0 left-0 w-0.5 bg-white/40" />
       {styles.icon && (
-        <img
-          src={styles.icon}
-          alt=""
-          className="mr-1.5 size-4 brightness-0 invert"
-          aria-hidden="true"
-        />
+          <span className="w-8 block">
+              <img
+              src={styles.icon}
+              alt=""
+              className="mr-1.5 size-4 brightness-0 invert w-auto"
+              aria-hidden="true"
+            />
+          </span>
       )}
       {children}
       {count !== undefined && (
