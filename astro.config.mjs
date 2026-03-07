@@ -15,10 +15,10 @@ export default defineConfig({
   integrations: [
     react(),
     AstroPWA({
-      mode: 'production',
       base: '/captainschair/',
       scope: '/captainschair/',
-      filename: 'sw.js', // This is default, but just in case
+      filename: 'sw.js',
+      manifestFilename: 'manifest.webmanifest',
       includeAssets: ['favicon.svg', 'favicon.ico', 'icons/*.svg'],
       registerType: 'autoUpdate',
       injectRegister: false, // We're doing it manually in Layout.astro
