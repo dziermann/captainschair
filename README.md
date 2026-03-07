@@ -67,6 +67,10 @@ This is a fan-made database and is **not** an official product.
 - The *Star Trek: Captain's Chair* board game is a product of **WizKids**.
 - This tool is provided for educational and entertainment purposes only.
 
+## ⚖️ License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
 ---
 
 *Engage!* 🖖

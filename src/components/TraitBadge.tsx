@@ -11,9 +11,10 @@ interface TraitBadgeProps {
   onClick?: () => void
   showX?: boolean
   count?: number
+  iconUrl?: string
 }
 
-export function TraitBadge({ children, trait, className, onClick, showX, count }: TraitBadgeProps) {
+export function TraitBadge({ children, trait, className, onClick, showX, count, iconUrl }: TraitBadgeProps) {
   const label = children
   const traitKey = trait || label
   const isSpeciesTrait = isSpecies(traitKey)
@@ -39,7 +40,11 @@ export function TraitBadge({ children, trait, className, onClick, showX, count }
         className
       )}
     >
-      <Icon className={clsx('mr-1.5 size-3.5', isWildcard ? 'text-black/70' : 'text-white/90')} aria-hidden="true" />
+      {iconUrl ? (
+        <img src={iconUrl} alt="" className="mr-1.5 size-4" />
+      ) : (
+        <Icon className={clsx('mr-1.5 size-3.5', isWildcard ? 'text-black/70' : 'text-white/90')} aria-hidden="true" />
+      )}
       {label}
       {count !== undefined && (
         <span className="ml-2 rounded-full bg-black/20 px-1.5 py-0.5 text-[10px] font-sans font-bold leading-none text-white/90">

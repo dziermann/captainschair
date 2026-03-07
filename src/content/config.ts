@@ -11,6 +11,8 @@ const cardsCollection = defineCollection({
       name: z.string(),
       category: z.string(),
       traits: z.array(z.string()),
+      focus: z.array(z.enum(['science', 'influence', 'attack'])).optional(),
+      competence: z.array(z.enum(['science', 'influence', 'attack'])).optional(),
       translations: z.record(z.object({
         name: z.string(),
       }))

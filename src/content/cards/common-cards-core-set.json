@@ -27,6 +27,7 @@
         "Human",
         "Starfleet"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Admiral Nechayev"
@@ -41,10 +42,11 @@
       "name": "Admiral Pressman",
       "category": "person",
       "traits": [
-        "Mutiny",
+        "Human",
         "Shady",
         "Starfleet"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Admiral Pressman"
@@ -100,6 +102,8 @@
         "Scientist",
         "Starfleet"
       ],
+      "focus": ["science"],
+      "competence": ["science"],
       "translations": {
         "en": {
           "name": "Bruce Maddox"
@@ -118,6 +122,7 @@
         "Klingon",
         "Shady"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Captain Dorg"
@@ -204,6 +209,7 @@
         "Scientist",
         "Trill"
       ],
+      "focus": ["science"],
       "translations": {
         "en": {
           "name": "Lenara Kahn"
@@ -221,6 +227,7 @@
         "Klingon",
         "Shady"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Lursa"
@@ -257,6 +264,7 @@
         "Romulan",
         "Scientist"
       ],
+      "focus": ["science"],
       "translations": {
         "en": {
           "name": "Mirok"
@@ -326,6 +334,8 @@
         "Communication",
         "Telepath"
       ],
+      "focus": ["influence"],
+      "competence": ["influence"],
       "translations": {
         "en": {
           "name": "Riva"
@@ -376,6 +386,7 @@
       "traits": [
         "Kelpien"
       ],
+      "focus": ["science"],
       "translations": {
         "en": {
           "name": "Su'Kal"
@@ -395,6 +406,7 @@
         "Spy",
         "Vulcan"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Talok"
@@ -446,6 +458,8 @@
       "traits": [
         "Doctor"
       ],
+      "focus": ["science"],
+      "competence": ["science"],
       "translations": {
         "en": {
           "name": "Biobed"
@@ -480,6 +494,7 @@
         "Cloak",
         "Ongoing"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Cloaking Device"
@@ -515,6 +530,7 @@
         "Ongoing",
         "Romulan"
       ],
+      "focus": ["science"],
       "translations": {
         "en": {
           "name": "Forced Singularity"
@@ -603,6 +619,7 @@
         "Bajoran",
         "Time Travel"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Orb of Time"
@@ -638,6 +655,7 @@
       "traits": [
         "Engineer"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Plasma Manifold"
@@ -655,6 +673,7 @@
         "Attack",
         "Communication"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Tachyon Detection Grid"
@@ -724,6 +743,7 @@
         "Imperial",
         "Romulan"
       ],
+      "competence": ["influence"],
       "translations": {
         "en": {
           "name": "Bird-of-Prey"
@@ -776,6 +796,7 @@
         "Romulan",
         "Weapon"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Holographic Drone Ship"
@@ -793,6 +814,8 @@
         "Imperial",
         "Klingon"
       ],
+      "competence": ["attack"],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "K'Tinga Battlecruiser"
@@ -810,6 +833,7 @@
         "Attack",
         "Shady"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Kazon Raider"
@@ -863,6 +887,7 @@
         "Starfleet",
         "Time Travel"
       ],
+      "focus": ["science"],
       "translations": {
         "en": {
           "name": "U.S.S. Enterprise-C"
@@ -881,6 +906,7 @@
         "Doctor",
         "Starfleet"
       ],
+      "focus": ["science"],
       "translations": {
         "en": {
           "name": "U.S.S. Pasteur"
@@ -914,6 +940,7 @@
         "Alien",
         "Anomaly"
       ],
+      "competence": ["science"],
       "translations": {
         "en": {
           "name": "Voth Research Vessel"
@@ -930,6 +957,7 @@
       "traits": [
         "Xindi"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Xindi-Reptilian Battleship"
@@ -1091,6 +1119,7 @@
         "Shady",
         "Telepath"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Leteans"
@@ -1125,6 +1154,7 @@
         "Alien",
         "Time Travel"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Suliban"
@@ -1158,6 +1188,7 @@
         "Scientist",
         "Starbase"
       ],
+      "competence": ["science"],
       "translations": {
         "en": {
           "name": "Armagosa Observatory"
@@ -1175,6 +1206,7 @@
         "Alien",
         "Communication"
       ],
+      "competence": ["science"],
       "translations": {
         "en": {
           "name": "Ancient Relay Station"
@@ -1189,6 +1221,7 @@
       "name": "Archer IV",
       "category": "location",
       "traits": [],
+      "competence": ["influence"],
       "translations": {
         "en": {
           "name": "Archer IV"
@@ -1221,6 +1254,7 @@
       "traits": [
         "Betazoid"
       ],
+      "competence": ["influence", "influence", "influence"],
       "translations": {
         "en": {
           "name": "Betazed"
@@ -1239,6 +1273,7 @@
         "Human",
         "Starfleet"
       ],
+      "competence": ["attack"],
       "translations": {
         "en": {
           "name": "Corvan II"
@@ -1269,6 +1304,7 @@
       "name": "Delta Vega",
       "category": "location",
       "traits": [],
+      "competence": ["attack"],
       "translations": {
         "en": {
           "name": "Delta Vega"
@@ -1303,6 +1339,7 @@
       "traits": [
         "Breen"
       ],
+      "competence": ["attack", "attack"],
       "translations": {
         "en": {
           "name": "Dozaria"
@@ -1336,6 +1373,7 @@
       "traits": [
         "Anomaly"
       ],
+      "competence": ["science"],
       "translations": {
         "en": {
           "name": "Indri VIII"
@@ -1355,6 +1393,7 @@
         "Engineer",
         "Starbase"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Kelvas Docks"
@@ -1390,6 +1429,7 @@
         "Starbase",
         "Starfleet"
       ],
+      "competence": ["science", "science"],
       "translations": {
         "en": {
           "name": "Regula I"
@@ -1458,6 +1498,7 @@
         "Orion",
         "Shady"
       ],
+      "competence": ["influence"],
       "translations": {
         "en": {
           "name": "Vertex III"
@@ -1472,6 +1513,7 @@
       "name": "Xahea",
       "category": "location",
       "traits": [],
+      "competence": ["attack"],
       "translations": {
         "en": {
           "name": "Xahea"
@@ -1489,6 +1531,7 @@
         "Anomaly",
         "Augment"
       ],
+      "focus": ["attack"],
       "translations": {
         "en": {
           "name": "Ancient Gene Fragments"
@@ -1542,6 +1585,7 @@
         "Alien",
         "Imperial"
       ],
+      "focus": ["influence"],
       "translations": {
         "en": {
           "name": "Iconian Gateway"
@@ -1574,6 +1618,7 @@
       "traits": [
         "Scientist"
       ],
+      "focus": ["science"],
       "translations": {
         "en": {
           "name": "Omega Particle"

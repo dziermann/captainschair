@@ -11,9 +11,10 @@ export interface Card {
   set?: string
   category: string
   traits?: string[]
+  focus?: ('science' | 'influence' | 'attack')[]
+  competence?: ('science' | 'influence' | 'attack')[]
   translations: Record<string, {
     name: string
-    traits: string[]
   }>
 }
 
@@ -38,6 +39,34 @@ export function CardItem({
 }: CardItemProps) {
   const translation = card.translations[lang] || card.translations['en'] || (card as any)
   const traits = card.traits || []
+  const focus = card.focus || []
+  const competence = card.competence || []
+
+  const FocusIcons = () => (
+    <>
+      {focus.map((f, index) => (
+        <img 
+          key={`${f}-${index}`}
+          src={`/captainschair/icons/focus/${f}.png`} 
+          alt={f} 
+          className="inline-block size-5 w-auto ml-1 align-text-top"
+        />
+      ))}
+    </>
+  )
+
+  const CompetenceIcons = () => (
+    <>
+      {competence.map((c, index) => (
+        <img 
+          key={`${c}-${index}`}
+          src={`/captainschair/icons/competence/${c}.png`} 
+          alt={c} 
+          className="inline-block size-5 w-auto ml-1 align-text-top"
+        />
+      ))}
+    </>
+  )
   
   if (columns === 1) {
     return (
@@ -55,6 +84,8 @@ export function CardItem({
           
           <h4 className="text-base font-bold text-white group-hover:text-indigo-300 transition-colors leading-tight truncate">
             {translation.name}
+            <FocusIcons />
+            <CompetenceIcons />
           </h4>
         </div>
 
@@ -82,6 +113,8 @@ export function CardItem({
       <div className="flex items-start justify-between gap-3 min-w-0">
         <h4 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors leading-tight min-w-0">
           {translation.name}
+          <FocusIcons />
+          <CompetenceIcons />
         </h4>
         <div className="shrink-0">
           <CardCategoryBadge 

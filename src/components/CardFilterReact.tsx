@@ -25,6 +25,8 @@ export default function CardFilterReact({ cards, lang }: Props) {
   const [selectedTraits, setSelectedTraits] = useState<string[]>([])
   const [selectedSpecies, setSelectedSpecies] = useState<string[]>([])
   const [selectedOtherTraits, setSelectedOtherTraits] = useState<string[]>([])
+  const [selectedFocus, setSelectedFocus] = useState<string[]>([])
+  const [selectedCompetence, setSelectedCompetence] = useState<string[]>([])
   const [selectedCategories, setSelectedCategories] = useState<string | null>(null)
   const [selectedSets, setSelectedSets] = useState<string[]>(['Core Set'])
   const [columns, setColumns] = useState<1 | 3>(3)
@@ -39,36 +41,75 @@ export default function CardFilterReact({ cards, lang }: Props) {
   const [searchQuery, setSearchQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
-  const { allSpecies, allOtherTraits, allRegularTraits, speciesCounts, otherCounts, traitCounts } = useMemo(() => {
+  const { 
+    allSpecies, 
+    allOtherTraits, 
+    allRegularTraits, 
+    allFocus,
+    allCompetence,
+    speciesCounts, 
+    otherCounts, 
+    traitCounts,
+    focusCounts,
+    competenceCounts,
+  } = useMemo(() => {
     const speciesSet = new Set<string>()
     const otherSet = new Set<string>()
     const regularSet = new Set<string>()
+    const focusSet = new Set<string>()
+    const competenceSet = new Set<string>()
     const sCounts: Record<string, number> = {}
     const oCounts: Record<string, number> = {}
     const tCounts: Record<string, number> = {}
+    const fCounts: Record<string, number> = {}
+    const cCounts: Record<string, number> = {}
 
     cards.forEach(card => {
+      const cardOtherSet = new Set<string>() // To avoid double counting traits in same card
+
       const traits = card.traits || []
       traits.forEach((t: string) => {
         if (isSpecies(t)) {
           speciesSet.add(t)
           sCounts[t] = (sCounts[t] || 0) + 1
         } else if (isOtherTrait(t)) {
-          otherSet.add(t)
-          oCounts[t] = (oCounts[t] || 0) + 1
+          cardOtherSet.add(t)
         } else {
           regularSet.add(t)
           tCounts[t] = (tCounts[t] || 0) + 1
         }
       })
+      
+      const focus = card.focus || []
+      focus.forEach(f => {
+        focusSet.add(f)
+        fCounts[f] = (fCounts[f] || 0) + 1
+      })
+
+      const competence = card.competence || []
+      competence.forEach(c => {
+        competenceSet.add(c)
+        cCounts[c] = (cCounts[c] || 0) + 1
+      })
+
+      // Update otherCounts and otherSet once per card
+      cardOtherSet.forEach(trait => {
+        otherSet.add(trait)
+        oCounts[trait] = (oCounts[trait] || 0) + 1
+      })
     })
+
     return {
       allSpecies: Array.from(speciesSet).sort(),
       allOtherTraits: Array.from(otherSet).sort(),
       allRegularTraits: Array.from(regularSet).sort(),
+      allFocus: Array.from(focusSet).sort(),
+      allCompetence: Array.from(competenceSet).sort(),
       speciesCounts: sCounts,
       otherCounts: oCounts,
-      traitCounts: tCounts
+      traitCounts: tCounts,
+      focusCounts: fCounts,
+      competenceCounts: cCounts,
     }
   }, [cards, lang])
 
@@ -118,8 +159,16 @@ export default function CardFilterReact({ cards, lang }: Props) {
         selectedSpecies.some(f => traits.includes(f))
 
       const matchesOtherTraits = selectedOtherTraits.length === 0 || 
-        selectedOtherTraits.some(trait => traits.includes(trait))
+        selectedOtherTraits.some(trait => 
+          traits.includes(trait)
+        )
 
+      const matchesFocus = selectedFocus.length === 0 || 
+        (card.focus && selectedFocus.some(f => card.focus!.includes(f as any)))
+
+      const matchesCompetence = selectedCompetence.length === 0 || 
+        (card.competence && selectedCompetence.some(c => card.competence!.includes(c as any)))
+      
       const matchesTraits = selectedTraits.length === 0 || 
         selectedTraits.some(trait => traits.includes(trait))
       
@@ -129,14 +178,16 @@ export default function CardFilterReact({ cards, lang }: Props) {
       const matchesSet = selectedSets.length === 0 || 
         (card.set && selectedSets.includes(card.set))
 
-      return matchesSearch && matchesSpecies && matchesOtherTraits && matchesTraits && matchesCategory && matchesSet
+      return matchesSearch && matchesSpecies && matchesOtherTraits && matchesFocus && matchesCompetence && matchesTraits && matchesCategory && matchesSet
     })
-  }, [cards, lang, selectedSpecies, selectedOtherTraits, selectedTraits, selectedCategories, selectedSets, searchQuery])
+  }, [cards, lang, selectedSpecies, selectedOtherTraits, selectedFocus, selectedCompetence, selectedTraits, selectedCategories, selectedSets, searchQuery])
 
   const clearFilters = () => {
     setSelectedTraits([])
     setSelectedSpecies([])
     setSelectedOtherTraits([])
+    setSelectedFocus([])
+    setSelectedCompetence([])
     setSelectedCategories(null)
     setSelectedSets([])
     setSearchQuery('')
@@ -148,6 +199,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
     )
   }
 
+
   const toggleSpecies = (speciesName: string) => {
     setSelectedSpecies(prev =>
       prev.includes(speciesName) ? prev.filter(s => s !== speciesName) : [...prev, speciesName]
@@ -157,6 +209,18 @@ export default function CardFilterReact({ cards, lang }: Props) {
   const toggleOtherTrait = (trait: string) => {
     setSelectedOtherTraits(prev =>
       prev.includes(trait) ? prev.filter(t => t !== trait) : [...prev, trait]
+    )
+  }
+
+  const toggleFocus = (focus: string) => {
+    setSelectedFocus(prev =>
+      prev.includes(focus) ? prev.filter(f => f !== focus) : [...prev, focus]
+    )
+  }
+
+  const toggleCompetence = (competence: string) => {
+    setSelectedCompetence(prev =>
+      prev.includes(competence) ? prev.filter(c => c !== competence) : [...prev, competence]
     )
   }
 
@@ -173,7 +237,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
   }
 
   const FilterControls = ({ mobile = false }: { mobile?: boolean }) => (
-    <div className={mobile ? "flex flex-col gap-8" : "bg-zinc-100 dark:bg-zinc-900/50 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm backdrop-blur-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-40"}>
+    <div className={mobile ? "flex flex-col gap-8" : "bg-zinc-100 dark:bg-zinc-900/50 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm backdrop-blur-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-40"}>
       <div>
         <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
           <Filter className="size-4 text-indigo-400" />
@@ -345,6 +409,93 @@ export default function CardFilterReact({ cards, lang }: Props) {
           </div>
         </div>
       </div>
+
+      <div>
+        <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
+          <Filter className="size-4 text-indigo-400" />
+          {t.focus}
+        </h3>
+        <div className="flex flex-col gap-3">
+          <Combobox
+            options={allFocus}
+            multiple
+            value={selectedFocus}
+            onChange={(val) => setSelectedFocus(val as string[])}
+            displayValue={(val) => val ? `${getTraitLabel(val as unknown as string, lang)} ${t.focus}` : ''}
+            placeholder={t.allFocus}
+          >
+            {(trait) => (
+              <ComboboxOption key={trait} value={trait} className="p-0! grid-cols-1!">
+                <TraitBadge 
+                  trait={trait} 
+                  className="w-full text-left shadow-none!" 
+                  count={focusCounts[trait]}
+                  iconUrl={`/captainschair/icons/focus/${trait}.png`}
+                >
+                  {`${getTraitLabel(trait, lang)} ${t.focus}`}
+                </TraitBadge>
+              </ComboboxOption>
+            )}
+          </Combobox>
+          <div className="flex flex-wrap gap-2">
+            {selectedFocus.map(trait => (
+              <TraitBadge 
+                key={trait} 
+                trait={trait} 
+                onClick={() => toggleFocus(trait)} 
+                showX
+                iconUrl={`/captainschair/icons/focus/${trait}.png`}
+              >
+                {`${getTraitLabel(trait, lang)} ${t.focus}`}
+              </TraitBadge>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-white flex items-center gap-2">
+          <Filter className="size-4 text-indigo-400" />
+          {t.competence}
+        </h3>
+        <div className="flex flex-col gap-3">
+          <Combobox
+            options={allCompetence}
+            multiple
+            value={selectedCompetence}
+            onChange={(val) => setSelectedCompetence(val as string[])}
+            displayValue={(val) => val ? `${getTraitLabel(val as unknown as string, lang)} ${t.competence}` : ''}
+            placeholder={t.allCompetence}
+          >
+            {(trait) => (
+              <ComboboxOption key={trait} value={trait} className="p-0! grid-cols-1!">
+                <TraitBadge 
+                  trait={trait} 
+                  className="w-full text-left shadow-none!" 
+                  count={competenceCounts[trait]}
+                  iconUrl={`/captainschair/icons/competence/${trait}.png`}
+                >
+                  {`${getTraitLabel(trait, lang)} ${t.competence}`}
+                </TraitBadge>
+              </ComboboxOption>
+            )}
+          </Combobox>
+          <div className="flex flex-wrap gap-2">
+            {selectedCompetence.map(trait => (
+              <TraitBadge 
+                key={trait} 
+                trait={trait} 
+                onClick={() => toggleCompetence(trait)} 
+                showX
+                iconUrl={`/captainschair/icons/competence/${trait}.png`}
+              >
+                {`${getTraitLabel(trait, lang)} ${t.competence}`}
+              </TraitBadge>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 
@@ -408,7 +559,7 @@ export default function CardFilterReact({ cards, lang }: Props) {
               </button>
             </div>
 
-            {(selectedTraits.length > 0 || selectedSpecies.length > 0 || selectedOtherTraits.length > 0 || selectedCategories || selectedSets.length > 0 || searchQuery !== '') && (
+            {(selectedTraits.length > 0 || selectedSpecies.length > 0 || selectedOtherTraits.length > 0 || selectedFocus.length > 0 || selectedCompetence.length > 0 || selectedCategories || selectedSets.length > 0 || searchQuery !== '') && (
               <button 
                 onClick={clearFilters}
                 className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-900/80 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all border border-zinc-200 dark:border-zinc-800 cursor-pointer"
